@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, NavDropdown, Button, Col} from 'react-bootstrap';
-import {Form, FormControl} from 'react-bootstrap';
+import {Navbar, Nav} from 'react-bootstrap';
 import logo from '../images/logo.png'
 class CustomNavbar extends Component {
   constructor(props) {

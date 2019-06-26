@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, NavDropdown, Button, Col, Row} from 'react-bootstrap';
-import {Form, FormControl} from 'react-bootstrap';
+import {Row} from 'react-bootstrap';
 import CustomButton from './button';
 
 class Outtro extends Component {

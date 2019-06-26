@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, NavDropdown, Button, Col} from 'react-bootstrap';
-import {Form, FormControl} from 'react-bootstrap';
 import logo_1 from '../images/logo_1.png';
 import logo_2 from '../images/logo_2.png';
 
@@ -42,11 +40,11 @@ class Footer extends Component {
             </ul>
 
             <div className="d-block d-sm-none footer-logo">
-                <img src={logo_1}></img>
+                <img src={logo_1} alt=""></img>
             </div>
 
             <div className="d-none">
-                <img src={logo_2}></img>
+                <img src={logo_2} alt=""></img>
             </div>
         </footer>
     )

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, NavDropdown, Button, Col} from 'react-bootstrap';
-import {Form, FormControl} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import Opportunity from './opportunity';
 
 class Discover extends Component {
@@ -24,7 +23,7 @@ class Discover extends Component {
                 {opportunities}
               </div>
               <div className='row see-all-link'>
-                <a href='' className='col-12'>SEE ALL OPPORTUNITIES <i class="fas fa-chevron-right"></i></a>
+                <a href="/" className='col-12'>SEE ALL OPPORTUNITIES <i class="fas fa-chevron-right"></i></a>
               </div>
             </div>
         </div>

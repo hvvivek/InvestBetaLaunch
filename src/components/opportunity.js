@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, NavDropdown, Button, Col, ProgressBar} from 'react-bootstrap';
-import {Form, FormControl} from 'react-bootstrap';
+import {Col, ProgressBar} from 'react-bootstrap';
 import agribusiness_img from '../images/agribusiness.png'
 
 const PLACEHOLDER_IMAGE = 'https://images.theconversation.com/files/210056/original/file-20180313-30961-1z04r7d.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip'
@@ -16,7 +15,7 @@ class Opportunity extends Component {
         <div className='opportunity'>
           <div className="row">
             <div className="col-12 business-img">
-              <img src={PLACEHOLDER_IMAGE}></img>
+              <img src={PLACEHOLDER_IMAGE} alt=""></img>
             </div>
 
             <section className="section-1 col-12">

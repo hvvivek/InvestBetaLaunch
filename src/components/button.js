@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, NavDropdown, Button, Col} from 'react-bootstrap';
-import {Form, FormControl} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import placeholder_img from '../images/placeholder_img.png'
 
 class CustomButton extends Component {
@@ -14,7 +13,7 @@ class CustomButton extends Component {
         <Button className='custom-button col-12'>
           <div className='row'>
             <div className='col-3 image-wrapper'>
-              <img src={placeholder_img}></img>
+              <img src={placeholder_img} alt=""></img>
             </div>
             <div className='col-9'>
               <p>I am an</p>
