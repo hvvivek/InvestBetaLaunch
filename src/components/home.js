@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import CustomNavbar from './navbar';
 import CustomButton from './button';
-import {Button} from 'react-bootstrap';
+import {Button, Col} from 'react-bootstrap';
 import intercom from '../images/intercom.png';
 
 class HomePage extends Component {
@@ -14,24 +14,25 @@ class HomePage extends Component {
     return (
       <div className='container' id='home'>
         <CustomNavbar></CustomNavbar>
-        <h1 className='col-10 offset-1'>Invest in highly-vetted African SME's</h1>
-        <ul className='col-10 offset-1'>
+        <h1 className='col-10 offset-1 col-sm-6'>Invest in highly-vetted African SME's</h1>
+        <ul className='col-10 offset-1 col-sm-6'>
             <li>Significant Returns.</li>
             <li>Capital Guaranteed.</li>
             <li>Meaningful Impact.</li>
         </ul>
-        <div className='row buttons'>
-          <div className='col-6'>
+        <Col xs={{span:'12'}} sm={{span:'6'}} className='row buttons'>
+          <Col xs={{span:'6'}} sm={{span:'12'}}>
             <CustomButton text='Entrepreneur' img='' />
-          </div>
-          <div className='col-6'>
+          </Col>
+          <Col xs={{span:'6'}} sm={{span:'12'}}>
             <CustomButton text='Investor' img='' />
-          </div>
-        </div>
+          </Col>
+        </Col>
         <Button className='customer-support-button'>
           <img src={intercom} alt="I"></img>
         </Button>
       </div>
+      
     )
   }
 }

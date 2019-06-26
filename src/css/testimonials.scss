@@ -5,7 +5,7 @@
     padding-top: 50px;
 }
 
-#testimonials h6
+#testimonials h6.subtitle
 {
     font: $font-demibold;
     font-size: 1.6rem;
@@ -40,7 +40,8 @@
 
 #testimonials .text
 {
-    padding: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     background-color: $slgreen;
 }
 
@@ -48,13 +49,14 @@
 {
     font: $font-bold;
     font-size: 1.6rem;
+    // margin-left: 0px;
 }
 
 #testimonials .text p
 {
     font: $font-book;
     font-size: 0.85rem;
-    margin-left: 1rem;
+    // margin-left: 1rem;
     margin-top: 1rem;
 }
 
@@ -68,7 +70,7 @@
 {
     font: $font-medium;
     font-size: 0.85rem;
-    margin-left: 1rem;
+    // margin-left: 1rem;
     color: $turquoise;
 }
 

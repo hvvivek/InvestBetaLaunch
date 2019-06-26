@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Row} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import CustomButton from './button';
 
 class Outtro extends Component {
@@ -12,18 +12,25 @@ class Outtro extends Component {
     
     return (
         <div className="row" id="outtro">
-          <div className="col-12">
-            <h1>Interested?</h1>
-            <h6>Start by choosing a path</h6>
-            <Row>
-              <div className="col-6">
-                <CustomButton text='Entrepreneur' img='' />
-              </div>
-              <div className="col-6">
-                <CustomButton text='Investor' img='' />
-              </div>
-            </Row>
-            </div>
+            <Col xs={{span:'12'}} md={{span:'6', offset:'3'}}> 
+              <Row>
+              <Col xs={{span:'12'}} sm={{span:'7'}}>
+                <h1>Interested?</h1>
+                <h6>Start by choosing a path</h6>
+              </Col>
+              <Col xs={{span:'12'}} sm={{span:'5'}}>
+                <Row>
+                  <Col xs={{span:'6'}} sm={{span:'12'}}>
+                    <CustomButton text='Entrepreneur' img='' />
+                  </Col>
+                  <Col xs={{span:'6'}} sm={{span:'12'}}>
+                    <CustomButton text='Investor' img='' />
+                  </Col>
+                </Row>
+              </Col>
+              </Row>
+            </Col>
+            
         </div>
     )
   }
