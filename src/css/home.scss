@@ -1,0 +1,45 @@
+@import './constants.scss';
+
+h1
+{
+    font: $font-demibold;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
+ul
+{
+    font: $font-book;
+    list-style: none;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+ul li
+{
+    margin-bottom: 0.5rem;
+}
+#home
+{
+    height: 100vh;
+    background-image: url('../images/bg_mobile.png');
+    background-repeat: no-repeat;
+    background-position-y: 65vh;
+    background-position-x: -15vw;
+}
+
+#home .buttons
+{
+    margin-top: 60px;
+}
+
+.customer-support-button
+{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    padding: 15px;
+    width: 70px;
+    height: 70px;
+}

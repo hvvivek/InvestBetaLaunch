@@ -1,0 +1,117 @@
+@import './constants.scss';
+
+.opportunity
+{
+    width: 275px;
+    height: 450px;
+    // float: left;
+    background-color: white;
+    margin: 1rem;
+    display: inline-flex;
+    border-radius: 5px;
+}
+
+
+.opportunity img
+{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.opportunity p
+{
+    margin-bottom: 0px;
+}
+
+.opportunity .business-img
+{
+    // padding: 0px;
+    height: 155px;
+    overflow-y: hidden;
+}
+
+.opportunity .section-1
+{
+    // margin-top: 0.8rem;
+}
+
+.opportunity .section-1 span
+{
+    font: $font-demibold;
+    font-size: 0.75rem;
+}
+
+.opportunity .business-type-image
+{
+    height: 1rem;
+    width: auto;
+    margin-top: -0.25rem; 
+}
+
+.opportunity .section-1 h4
+{
+    font: $font-demibold;
+    font-size: 1.25rem;
+    margin-bottom: 0px;
+}
+
+
+.opportunity .section-1 p
+{
+    font: $font-book;
+    font-size: 0.75rem;
+}
+
+.opportunity .section-2
+{
+    margin-top: 0.8rem;
+}
+
+.opportunity .section-2 h5
+{
+    font: $font-demibold;
+    font-size: 2.25rem;
+    color: $turquoise;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.opportunity .section-2 p
+{
+    font: $font-medium;
+    font-size: 0.75rem;
+}
+
+.opportunity .section-2 .returns
+{
+    font: $font-bold;
+    font-size: 0.75rem;
+}
+
+.opportunity .section-3 p
+{
+    font: $font-demibold;
+    font-size: 0.75rem;
+}
+
+.opportunity .section-3 .time-to-go
+{
+    text-align: right;
+}
+
+.bg-info
+{
+    background-color: $navy !important;
+    
+}
+
+.progress
+{
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    height: 0.8rem;
+    border: 1px solid $navy;
+}

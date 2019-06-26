@@ -1,0 +1,61 @@
+@import './constants.scss';
+
+footer
+{
+    margin-top: 8rem;
+}
+
+footer ul
+{
+    text-align: left;
+    font-size: 1.2rem;
+    color: $teal;
+    margin-top: 2rem;
+}
+
+footer ul>li:first-of-type
+{
+    font: $font-bold;
+    font-size: 1.5rem;
+    color: $navy;
+}
+
+footer ul>li
+{
+    margin-left: 1rem;
+}
+
+footer .sm-links
+{
+    padding: 0px;
+}
+
+
+footer .sm-links>ul
+{
+    padding: 0px;
+}
+
+footer .sm-links li
+{
+    padding: 0px;
+    font: $font-medium;
+}
+
+footer .sm-links li:first-of-type
+{
+    padding: 0px;
+    font: $font-medium;
+    color: $teal;
+}
+
+footer .footer-logo
+{
+    max-width: 5rem;
+    margin-top: 3rem;
+}
+
+footer i
+{
+    font-size: 1.5rem;
+}

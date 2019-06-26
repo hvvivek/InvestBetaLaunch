@@ -1,7 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import './css/constants.scss';
+import './css/button.scss';
+import './css/advantageLink.scss';
+import './css/opportunity.scss';
+
+import './css/navbar.scss';
+import './css/home.scss';
+import './css/advantage.scss';
+import './css/discover.scss';
+import './css/testimonials.scss';
+import './css/outtro.scss';
+import './css/footer.scss';
+
+import App from './app';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));

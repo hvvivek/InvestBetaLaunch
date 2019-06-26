@@ -1,0 +1,71 @@
+@import './constants.scss';
+
+#discover
+{
+    position: relative;
+}
+
+
+h3
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#discover .wrapper
+{
+    background-color: #EBEBEB;
+    padding-top: 4rem;
+    overflow-x: scroll;
+}
+
+
+#discover .next
+{
+    margin-bottom: 30px;
+    background-color: $navy;
+    color: $turquoise;
+    font-weight: 900;
+    border-radius: 50px;
+    // float: right;
+    top: 5rem;
+    right: 20px;
+    font-size: 0.9rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    z-index: 1000;
+}
+
+#discover .opportunities-wrapper
+{
+    height: max-content;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: max-content;
+}
+
+#discover .see-all-link
+{
+    text-align: right;
+    font: $font-medium;
+    font-size: 0.85rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 5px;
+}
+
+#discover .see-all-link a
+{
+    color: $turquoise; 
+}
+
+#discover .see-all-link i
+{
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+    // font-weight: 300;
+}

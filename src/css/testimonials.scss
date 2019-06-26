@@ -1,0 +1,79 @@
+@import './constants.scss';
+
+#testimonials
+{
+    padding-top: 50px;
+}
+
+#testimonials h6
+{
+    font: $font-demibold;
+    font-size: 1.6rem;
+    color: $navy;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+#testimonials h1
+{
+    font: $font-bold;
+    font-size: 2.5rem;
+    color: $turquoise;
+    text-align: left;
+    margin-top: 0px;
+    margin-left: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+#testimonials .img-wrapper
+{
+    height: 375px;
+    overflow: hidden;
+}
+
+#testimonials img
+{
+    width: 100%;
+    height: auto;
+}
+
+
+#testimonials .text
+{
+    padding: 2.5rem;
+    background-color: $slgreen;
+}
+
+#testimonials .text h6
+{
+    font: $font-bold;
+    font-size: 1.6rem;
+}
+
+#testimonials .text p
+{
+    font: $font-book;
+    font-size: 0.85rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+#testimonials .text p span
+{
+    font: $font-bold;
+    font-size: 0.85rem;
+}
+
+#testimonials .text a
+{
+    font: $font-medium;
+    font-size: 0.85rem;
+    margin-left: 1rem;
+    color: $turquoise;
+}
+
+#testimonials .text a i
+{
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}

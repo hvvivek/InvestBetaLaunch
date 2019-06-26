@@ -1,0 +1,47 @@
+@import './constants.scss';
+
+
+// <Button className='custom-button'><img src={this.state.img}></img> <p>I am an</p><p>{this.state.text}</p></Button>
+
+.custom-button
+{
+    font: $font-book;
+    text-align: left;
+    background-color: $navy;
+    color: $white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.custom-button .image-wrapper
+{
+    padding: 0px 10px 0px 10px;
+}
+.custom-button img
+{
+    height: 1.8rem;
+    width: auto;
+    padding: 0px;
+}
+
+.custom-button p:first-of-type
+{
+    font-size: 0.5rem;
+    margin-bottom: 0rem;
+}
+
+
+.custom-button p:last-of-type
+{
+    font: $font-demibold;
+    font-size: 0.9rem;
+    margin-bottom: 0px;
+}
+
+.customer-support-button
+{
+    background-color: $turquoise;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}

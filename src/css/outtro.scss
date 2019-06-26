@@ -1,0 +1,44 @@
+@import './constants.scss';
+
+
+#outtro
+{
+    padding: 2rem;
+
+}
+
+#outtro>div
+{
+    background-color: $teal;  
+    border-radius: 5px;  
+}
+
+#outtro h1
+{
+    font: $font-bold;
+    font-size: 2.5rem;
+    color: white;
+    text-align: left;
+}
+
+#outtro h6
+{
+    font: $font-bold;
+    font-size: 1.6rem;
+    color: $turquoise;
+    text-align: left;
+}
+
+#outtro .col-6
+{
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+#outtro button
+{
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+
+}

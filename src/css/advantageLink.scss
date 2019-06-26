@@ -1,0 +1,52 @@
+@import './constants.scss';
+
+
+h3
+{
+    font: $font-bold;
+    font-size: 1.5rem;
+    color: $navy;
+}
+
+
+h3.col-8
+{
+    padding: 0px;
+}
+
+.advantage
+{
+    padding: 25px;
+    background-color: white;
+    height: 320px;
+    margin-bottom: 2em;
+}
+
+#advantage .wrapper
+{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.advantage p
+{
+    font: $font-book;
+    font-size: 0.8rem;
+    color: $navy;
+    padding: 0px;
+    line-height: 1.2rem;
+
+}
+
+.advantage a
+{
+    font: $font-book;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 60px;
+    color: $turquoise;
+    position: absolute;
+    bottom: 3.5rem;
+    padding: 0px;
+    // left: 20px;
+}

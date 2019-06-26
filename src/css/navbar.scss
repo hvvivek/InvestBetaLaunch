@@ -1,0 +1,19 @@
+@import './constants.scss';
+
+.navbar-light .navbar-brand
+{
+    font: $font-bold;
+    font-size: 1.25rem;
+    color: $teal;
+}
+
+.navbar-light .navbar-brand img
+{
+    margin-right: 0.5rem;
+    margin-top: -0.2rem;
+}
+
+.navbar-light .navbar-toggler
+{
+    border: none;
+}

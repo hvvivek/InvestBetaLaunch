@@ -1,0 +1,21 @@
+@import './constants.scss';
+
+#advantage
+{
+    background-color: $slgreen;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h2
+{
+    font:  $font-bold;
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+#advantage h3
+{
+    text-align: left;
+}
