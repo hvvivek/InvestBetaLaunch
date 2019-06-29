@@ -17,3 +17,50 @@
 {
     border: none;
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+   
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+   
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .navbar-light .navbar-brand
+    {
+        font: $font-bold;
+        font-size: 2.3rem;
+        color: $teal;
+        margin-top: 1rem;
+    }
+    
+    .navbar-light .navbar-brand img
+    {
+        margin-right: 0.5rem;
+        margin-top: -0.2rem;
+        height: 2.3rem;
+        width: auto;
+    }
+
+    #basic-navbar-nav
+    {
+        margin-top: 0.5rem;
+        margin-left: 2rem;
+
+    }
+
+    .navbar-light .navbar-nav>.nav-link
+    {
+        padding-bottom: 0px;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }

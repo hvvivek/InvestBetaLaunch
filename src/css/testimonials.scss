@@ -104,29 +104,32 @@
     #testimonials .text h6
     {
         font: $font-bold;
-        font-size: 2.2rem;
-        // margin-left: 0px;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
     }
 
     #testimonials .text p
     {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
 
     #testimonials .text p span
     {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
 
     #testimonials .text a
     {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-top: 2rem;
     }
 
     #testimonials .text a i
     {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
  }
 

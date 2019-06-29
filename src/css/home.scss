@@ -6,6 +6,7 @@ h1
     font-size: 2.5rem;
     text-align: center;
     margin-top: 50px;
+    color: $navy;
 }
 
 ul
@@ -14,6 +15,7 @@ ul
     list-style: none;
     font-size: 1.1em;
     text-align: center;
+    color: $navy;
 }
 
 ul li
@@ -47,6 +49,11 @@ ul li
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
+    
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
     h1
     {
         font-size: 3.75rem;
@@ -55,7 +62,7 @@ ul li
 
     ul
     {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         text-align: left;
     }
 
@@ -63,10 +70,7 @@ ul li
     {
         margin-top: 50px;
     }
- }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
+    
     #home
     {
         background-image: url('../images/bg_mobile.png');

@@ -11,7 +11,7 @@ class Footer extends Component {
   render() {
     return (
         <footer className="row">
-            <div className="d-none d-lg-block col-lg-2 offset-lg-1">
+            <div className="d-none d-lg-block col-lg-2 offset-lg-1 logo-img-wrapper">
                 <img src={logo_2} alt=""></img>
             </div>
 

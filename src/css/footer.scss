@@ -59,3 +59,37 @@ footer i
 {
     font-size: 1.5rem;
 }
+
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .logo-img-wrapper
+    {
+        padding-top: 3rem;
+    }
+
+    footer ul
+    {
+        // text-align: left;
+        font-size: 1.1rem;
+        // color: $teal;
+        // margin-top: 2rem;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }

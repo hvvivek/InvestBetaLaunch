@@ -23,10 +23,10 @@ class HomePage extends Component {
         </ul>
         <Col xs={{span:'12'}} sm={{span:'5', offset:'0'}} lg={{span:'8', offset:'0'}} className='buttons'>
           <Row>
-          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'6'}}>
+          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5'}}>
             <CustomButton text='Investor' img='' />
           </Col>
-          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'6'}}>
+          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5', offset:'1'}}>
             <CustomButton text='Entrepreneur' img='' />
           </Col>
           </Row>

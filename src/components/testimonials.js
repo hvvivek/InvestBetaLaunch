@@ -19,9 +19,9 @@ class Testimonials extends Component {
               <img src={testimonial_img} alt=""></img>
             </Col>
             <Col xs={{span: '12'}} sm={{span:'6'}} className='text'>
-                <h6 className="col-10 offset-1 col-sm-10 col-lg-9">“InvestBeta gave me the platform to reach investors from around the world who have helped me grow my team and revenues.”</h6>
-                <p className="col-10 offset-1 col-sm-10 col-lg-9">- <span>Shola Adekunlye</span>, First Business Cohort of InvestBeta</p>
-                <a className="col-10 offset-1 col-sm-10 col-lg-9" href="/">MORE STORIES <i class="fas fa-chevron-right"></i></a>
+                <h6 className="col-10 offset-1 col-sm-10 col-lg-8">“InvestBeta gave me the platform to reach investors from around the world who have helped me grow my team and revenues.”</h6>
+                <p className="col-10 offset-1 col-sm-10 col-lg-8">- <span>Shola Adekunlye</span>, First Business Cohort of InvestBeta</p>
+                <a className="col-10 offset-1 col-sm-10 col-lg-8" href="/">MORE STORIES <i class="fas fa-chevron-right"></i></a>
             </Col>
             </Row>
         </div>
