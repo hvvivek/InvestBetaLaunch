@@ -11,11 +11,11 @@ class Footer extends Component {
   render() {
     return (
         <footer className="row">
-            <div className="d-none d-md-block col-md-2 offset-md-1">
+            <div className="d-none d-lg-block col-lg-2 offset-lg-1">
                 <img src={logo_2} alt=""></img>
             </div>
 
-            <ul className="col-6 col-sm-3 offset-sm-1 col-md-2 offset-md-1">
+            <ul className="col-6 col-sm-3 offset-sm-0 col-lg-2 offset-lg-1">
                 <li>Company</li>
                 <li>Discover</li>
                 <li>Blog</li>
@@ -43,7 +43,7 @@ class Footer extends Component {
                 <li>617-218-7273</li>
             </ul>
 
-            <div className="d-block d-sm-none footer-logo">
+            <div className="col-sm-2 offset-sm-1 d-block d-lg-none footer-logo">
                 <img src={logo_1} alt=""></img>
             </div>
 

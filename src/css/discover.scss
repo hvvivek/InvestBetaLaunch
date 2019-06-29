@@ -69,3 +69,39 @@ h3
     padding-left: 0.5rem;
     // font-weight: 300;
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    #discover h3
+    {
+        font-size: 2.8rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+
+    #discover .next
+    {
+        top: 7.5rem;
+        right: 20px;
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    #discover h3
+    {
+        font-size: 2.5rem;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }

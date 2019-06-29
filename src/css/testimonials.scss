@@ -49,6 +49,8 @@
 {
     font: $font-bold;
     font-size: 1.6rem;
+    color: $navy;
+
     // margin-left: 0px;
 }
 
@@ -79,3 +81,56 @@
     font-size: 0.75rem;
     margin-left: 0.5rem;
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    #testimonials .img-wrapper
+    {
+        height: 600px;
+        overflow: hidden;
+    }
+
+    #testimonials .text h6
+    {
+        font: $font-bold;
+        font-size: 2.2rem;
+        // margin-left: 0px;
+    }
+
+    #testimonials .text p
+    {
+        font-size: 1.2rem;
+    }
+
+    #testimonials .text p span
+    {
+        font-size: 1.2rem;
+    }
+
+
+    #testimonials .text a
+    {
+        font-size: 1.2rem;
+    }
+
+    #testimonials .text a i
+    {
+        font-size: 1rem;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }

@@ -9,7 +9,7 @@ class CustomNavbar extends Component {
 
   render() {
     return (
-        <Navbar bg="transparent" expand="lg">
+        <Navbar bg="transparent" expand="lg" className="col-12">
             <Navbar.Brand href="#home">
             <img
               src={logo}

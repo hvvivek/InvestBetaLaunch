@@ -15,7 +15,7 @@ class CustomButton extends Component {
             <div className='col-3 image-wrapper'>
               <img src={placeholder_img} alt=""></img>
             </div>
-            <div className='col-9'>
+            <div className='col-9 text-wrapper'>
               <p>I am an</p>
               <p>{this.state.text}</p>
             </div> 

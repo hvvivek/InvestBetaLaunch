@@ -9,13 +9,13 @@
     text-align: left;
     background-color: $navy;
     color: $white;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .custom-button .image-wrapper
 {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 15px;
 }
 .custom-button img
 {
@@ -45,3 +45,54 @@
     outline: none;
     border-radius: 50px;
 }
+
+.custom-button .text-wrapper
+{
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    .custom-button img
+    {
+        height: 2.8rem;
+    }
+
+    .custom-button .image-wrapper
+    {
+        padding: 0.5rem;
+        padding-left: 1rem;
+    }
+    .custom-button p:first-of-type
+    {
+        font-size: 0.65rem;
+    }
+
+
+    .custom-button p:last-of-type
+    {
+        font-size: 1.25rem;
+    }
+
+    .custom-button .text-wrapper
+    {
+        padding-left: 10px;
+        padding-top: 0.8rem;
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }
