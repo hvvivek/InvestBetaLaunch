@@ -67,7 +67,13 @@ ul li
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-
+    #home
+    {
+        background-image: url('../images/bg_mobile.png');
+        background-repeat: no-repeat;
+        background-position-y: 35vh;
+        background-position-x: right;
+    }
  }
 
 // Large devices (desktops, 992px and up)
