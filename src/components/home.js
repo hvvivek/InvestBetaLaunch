@@ -21,12 +21,12 @@ class HomePage extends Component {
             <li>Capital Guaranteed.</li>
             <li>Meaningful Impact.</li>
         </ul>
-        <Col xs={{span:'12'}} sm={{span:'5', offset:'0'}} lg={{span:'8', offset:'0'}} className='buttons'>
+        <Col xs={{span:'12'}} sm={{span:'5', offset:'0'}} lg={{span:'8', offset:'0'}}  xl={{span:'5'}} className='buttons'>
           <Row>
-          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5'}}>
+          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5'}} xl={{span:'10'}}>
             <CustomButton text='Investor' img='' />
           </Col>
-          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5', offset:'1'}}>
+          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5', offset:'1'}} xl={{span:'10', offset: '0'}}>
             <CustomButton text='Entrepreneur' img='' />
           </Col>
           </Row>

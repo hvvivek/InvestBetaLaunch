@@ -11,11 +11,11 @@ class Footer extends Component {
   render() {
     return (
         <footer className="row">
-            <div className="d-none d-lg-block col-lg-2 offset-lg-1 logo-img-wrapper">
+            <div className="d-none d-lg-block col-lg-2 offset-lg-2 logo-img-wrapper">
                 <img src={logo_2} alt=""></img>
             </div>
 
-            <ul className="col-6 col-sm-3 offset-sm-0 col-lg-2 offset-lg-1">
+            <ul className="col-6 col-sm-3 offset-sm-0 col-lg-2 offset-lg-1 offset-xl-0">
                 <li>Company</li>
                 <li>Discover</li>
                 <li>Blog</li>
@@ -33,10 +33,10 @@ class Footer extends Component {
                 <li>Connect</li>
                 <li className="sm-links col-12">
                     <ul className="row">
-                        <li className="col-2"><i class="fab fa-twitter"></i></li>
-                        <li className="col-2"><i class="fab fa-facebook"></i></li>
-                        <li className="col-2"><i class="fab fa-whatsapp"></i></li>
-                        <li className="col-2"><i class="fab fa-instagram"></i></li>
+                        <li className="col-2"><i className="fab fa-twitter"></i></li>
+                        <li className="col-2"><i className="fab fa-facebook"></i></li>
+                        <li className="col-2"><i className="fab fa-whatsapp"></i></li>
+                        <li className="col-2"><i className="fab fa-instagram"></i></li>
                     </ul>
                 </li>
                 <li>info@investbeta.com</li>

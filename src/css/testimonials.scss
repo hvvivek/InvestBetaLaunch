@@ -135,5 +135,44 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
+    #testimonials h6.subtitle
+    {
+        text-align: center;
+    }
+    
+    #testimonials h1
+    {
+        text-align: center;
+    }
 
+    #testimonials .text h6
+    {
+        font: $font-bold;
+        font-size: 2.7rem;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
+
+    #testimonials .text p
+    {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+
+    #testimonials .text p span
+    {
+        font-size: 1.7rem;
+    }
+
+
+    #testimonials .text a
+    {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+
+    #testimonials .text a i
+    {
+        font-size: 1.25rem;
+    }
  }

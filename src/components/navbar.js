@@ -10,7 +10,7 @@ class CustomNavbar extends Component {
   render() {
     return (
         <Navbar bg="transparent" expand="lg" className="col-12">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
             <img
               src={logo}
               width="25"
@@ -22,10 +22,10 @@ class CustomNavbar extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="#home">Link 1</Nav.Link>
-                <Nav.Link href="#link">Link 2</Nav.Link>
-                <Nav.Link href="#link">Link 3</Nav.Link>
-                <Nav.Link href="#link">Link 4</Nav.Link>
+                <Nav.Link href="#home">Discover</Nav.Link>
+                <Nav.Link href="#link">Blog</Nav.Link>
+                <Nav.Link href="#link">Help</Nav.Link>
+                <Nav.Link href="#link">About</Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Navbar>
