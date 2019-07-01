@@ -224,11 +224,11 @@ class DiscoverApp extends Component {
             
             
             {/* <Row> */}
-              <div className='col-10 offset-1 wrapper'>
+              <div className='col-12 col-lg-10 offset-lg-1 wrapper'>
 
               <Col xs={{span: '12'}}>
                 <Row>
-                    <InputGroup className="col-12 col-md-4 offset-2">
+                    <InputGroup className="col-12 col-md-6 col-lg-4 offset-lg-2">
                         <FormControl
                         placeholder="Search for businesses"
                         aria-label="Search for businesses"
@@ -237,20 +237,20 @@ class DiscoverApp extends Component {
                         />
                     </InputGroup>
 
-                    <Dropdown className='col-6 col-md-2'>
+                    <Dropdown className='col-12 col-md-3 col-lg-2'>
                         <Dropdown.Toggle id="dropdown-basic" className='col-12 custom-button'>
                             Filter
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Location</Dropdown.Item>
+                            <Dropdown.Item href="#">Location</Dropdown.Item>
                             {location_doms}
-                            <Dropdown.Item href="#/action-3">Business Type</Dropdown.Item>
+                            <Dropdown.Item href="#">Business Type</Dropdown.Item>
                             {business_type_doms}
                         </Dropdown.Menu>
                     </Dropdown>
 
-                    <Dropdown className='col-6 col-md-2'>
+                    <Dropdown className='col-12 col-md-3  col-lg-2'>
                         <Dropdown.Toggle id="dropdown-basic" className='col-12 custom-button'>
                             Sort
                         </Dropdown.Toggle>
