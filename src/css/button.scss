@@ -11,6 +11,29 @@
     color: $white;
     padding-top: 7px;
     padding-bottom: 7px;
+    outline: none;
+    border: none;
+}
+
+.custom-button:hover
+{
+    background-color: $darknavy;
+}
+
+.custom-button-inverse
+{
+    color: $navy;
+    background-color: $white;
+    outline: none;
+    border: 1px solid $navy;
+}
+
+.custom-button-inverse:hover
+{
+    background-color: rgb(247, 245, 245);
+    color: $navy;
+    outline: none;
+    border: 1px solid $navy;
 }
 
 .custom-button .image-wrapper

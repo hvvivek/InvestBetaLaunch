@@ -6,8 +6,8 @@ import './css/button.scss';
 import './css/advantageLink.scss';
 import './css/opportunity.scss';
 
-import './css/navbar.scss';
 import './css/home.scss';
+import './css/navbar.scss';
 import './css/advantage.scss';
 import './css/discover.scss';
 import './css/testimonials.scss';
