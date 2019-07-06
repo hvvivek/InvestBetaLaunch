@@ -9,6 +9,7 @@ import Outtro from './components/outtro_cta';
 import Footer from './components/footer';
 import CustomNavbar from './components/navbar';
 import DiscoverApp from './components/discoverApp';
+import OpporunityApp from './components/opporunityApp';
 
 
 function LandingPage() {
@@ -33,6 +34,20 @@ function DiscoverPage() {
           <Footer></Footer>
         </div>);
 }
+
+function OpporunityPage({match}) {
+  console.log(match.params.id)
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <OpporunityApp id={match.params.id}></OpporunityApp>
+          <Footer></Footer>
+        </div>);
+}
+
 
 class App extends Component {
   constructor(props) {
@@ -59,6 +74,8 @@ class App extends Component {
         <div>
           <Route path="/" exact component={LandingPage} />
           <Route path="/discover/" component={DiscoverPage} />
+          <Route path="/opportunity/:id" component={OpporunityPage} />
+
         </div>
       </Router>
     );

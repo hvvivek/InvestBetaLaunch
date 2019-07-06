@@ -14,6 +14,7 @@ import './css/testimonials.scss';
 import './css/outtro.scss';
 import './css/footer.scss';
 import './css/discoverApp.scss';
+import './css/opportunityApp.scss';
 
 import App from './app';
 import * as serviceWorker from './serviceWorker';

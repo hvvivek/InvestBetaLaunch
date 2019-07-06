@@ -1,0 +1,282 @@
+@import './constants.scss';
+
+#opportunity-app
+{
+
+}
+
+#opportunity-app h1
+{
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+#opportunity-app .header p
+{
+    color: $navy;
+    font-size: 0.85rem;
+    font: $font-book;
+}
+
+#opportunity-app .header
+{
+    margin-bottom: 2rem;
+}
+
+#opportunity-app .img-wrapper img
+{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+#opportunity-app .img-wrapper
+{
+    margin-bottom: 0rem;
+}
+
+#opportunity-app .social-media-links
+{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: $navy;
+}
+
+#opportunity-app .social-media-links a
+{
+    color: $teal;
+}
+
+
+#opportunity-app p
+{
+    margin-bottom: 0px;
+}
+
+.opportunity .business-img
+{
+    // padding: 0px;
+    height: 155px;
+    overflow-y: hidden;
+}
+
+
+#opportunity-app h4
+{
+    font: $font-demibold;
+    font-size: 1.25rem;
+    margin-bottom: 0px;
+}
+
+#opportunity-app .section-1
+{
+    margin-bottom: 2rem;
+}
+
+#opportunity-app .section-1 p,
+#opportunity-app .section-4 p
+{
+    font: $font-book;
+    font-size: 1rem;
+}
+
+#opportunity-app .section-1 h5,
+#opportunity-app .section-4 h5
+{
+    font: $font-bold;
+    font-size: 1.2rem;
+}
+
+#opportunity-app .section-5 p
+{
+    font: $font-book;
+    font-size: 1rem;
+}
+
+#opportunity-app .section-5 h5
+{
+    font: $font-bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+#opportunity-app .section-5
+{
+    margin-bottom: 2rem;
+}
+
+#opportunity-app .section-6 h5
+{
+    font: $font-bold;
+    font-size: 1.2rem;
+    // margin-bottom: 0px;
+}
+
+
+#opportunity-app .section-6 .doc-wrapper
+{
+    font: $font-book;
+    border-radius: 2rem;
+    border: 1px solid $lgreen;
+    background-color: $earth;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    // margin-bottom: 0px;
+}
+
+#opportunity-app .section-6 .doc-wrapper i
+{
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+}
+
+#opportunity-app .section-6 .doc-wrapper a
+{
+    color: black;
+}
+
+#opportunity-app .section-4 h5
+{
+    font-size: 1.2rem;
+}
+
+#opportunity-app .section-4 p
+{
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+#opportunity-app .section-4
+{
+    border-radius: 10px;
+    background-color: $lgreen;
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#opportunity-app .section-3
+{
+    margin-top: 2rem;
+}
+
+#opportunity-app .section-4 h4
+{
+    margin-bottom: 1rem;
+}
+
+#opportunity-app .section-4 p
+{
+    margin-bottom: 1rem;
+}
+
+#opportunity-app .section-2
+{
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+#opportunity-app .section-2 h5
+{
+    font: $font-demibold;
+    font-size: 2.25rem;
+    color: $turquoise;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#opportunity-app .section-2 p
+{
+    font: $font-medium;
+    font-size: 0.75rem;
+}
+
+#opportunity-app .section-2 .returns
+{
+    font: $font-bold;
+    font-size: 0.75rem;
+}
+
+#opportunity-app .section-3 p
+{
+    font: $font-demibold;
+    font-size: 0.75rem;
+}
+
+#opportunity-app .section-3 .time-to-go
+{
+    text-align: right;
+}
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    #opportunity-app .section-6
+    {
+        padding-top: 2rem;
+    }
+
+    // #opportunity-app .section-1
+    // {
+    //     margin: auto;
+    // }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    #opportunity-app .calculator>div
+    {
+        background-color: $earth;
+        border: 1px solid rgb(231, 210, 114);
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    #opportunity-app .calculator span.text
+    {
+        margin: auto;
+        padding: 0px;
+        text-align: left;
+    }
+
+    #opportunity-app .calculator span.total
+    {
+        font: $font-demibold;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #opportunity-app .custom-button
+    {
+        // font: $font-demibold;
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border: none;
+        outline: none;
+    }
+
+    #opportunity-app h1
+    {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }

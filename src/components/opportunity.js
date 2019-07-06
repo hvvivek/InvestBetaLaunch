@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {Col, ProgressBar} from 'react-bootstrap';
 import agribusiness_img from '../images/agribusiness.png'
+import { withRouter } from 'react-router-dom';
 
 const PLACEHOLDER_IMAGE = 'https://images.theconversation.com/files/210056/original/file-20180313-30961-1z04r7d.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip'
 
 class Opportunity extends Component {
   constructor(props) {
     super(props);
+    this.routeChange = this.routeChange.bind(this)
     this.state = {text: this.props.text, img: this.props.img, data:this.props.value, business:this.props.value.business}
   }
 
@@ -16,12 +18,18 @@ class Opportunity extends Component {
 
   }
 
+  routeChange()
+  {
+    let path = '/opportunity/' + this.state.data._id;
+    this.props.history.push(path);
+  }
+
   render() {
     console.log("Rendering card again")
     let fundingLeft = (this.state.data.units - this.state.data.units_sold) * this.state.data.unit_price
     let progress = (this.state.data.units_sold*100)/this.state.data.units
     return (
-        <div className='opportunity'>
+        <div className='opportunity' onClick={this.routeChange}>
           <div className="row">
             <div className="col-12 business-img">
               <img src={this.state.data.picture_link} alt=""></img>
@@ -53,4 +61,4 @@ class Opportunity extends Component {
   }
 }
 
-export default Opportunity;
+export default withRouter(Opportunity);
