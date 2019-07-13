@@ -15,6 +15,9 @@ import './css/outtro.scss';
 import './css/footer.scss';
 import './css/discoverApp.scss';
 import './css/opportunityApp.scss';
+import './css/auth.scss';
+import './css/account.scss';
+import './css/order.scss';
 
 import App from './app';
 import * as serviceWorker from './serviceWorker';

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {Row} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import HomePage from './components/home';
 import Advantage from './components/advantage';
 import Discover from './components/discover';
@@ -10,6 +10,9 @@ import Footer from './components/footer';
 import CustomNavbar from './components/navbar';
 import DiscoverApp from './components/discoverApp';
 import OpporunityApp from './components/opporunityApp';
+import AuthApp from './components/auth';
+import AccountApp from './components/accountApp';
+import OrderApp from './components/order';
 
 
 function LandingPage() {
@@ -48,6 +51,46 @@ function OpporunityPage({match}) {
         </div>);
 }
 
+function AuthPage({match}) {
+  console.log(match.params.id)
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <Col xs={{span:'10', offset:'1'}} lg={{span:'4', offset:'4'}}>
+            <AuthApp id={match.params.id}></AuthApp>
+          </Col>
+          <Footer></Footer>
+        </div>);
+}
+
+function AccountPage() {
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <AccountApp></AccountApp>
+          <Footer></Footer>
+        </div>);
+}
+
+function OrderPage({match}) {
+  console.log(match.params.id)
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <OrderApp id={match.params.id}></OrderApp>
+          <Footer></Footer>
+        </div>);
+}
+
 
 class App extends Component {
   constructor(props) {
@@ -75,6 +118,9 @@ class App extends Component {
           <Route path="/" exact component={LandingPage} />
           <Route path="/discover/" component={DiscoverPage} />
           <Route path="/opportunity/:id" component={OpporunityPage} />
+          <Route path="/auth/:id" component={AuthPage} />
+          <Route path="/account" component={AccountPage} />
+          <Route path="/order/:id" component={OrderPage} />
 
         </div>
       </Router>

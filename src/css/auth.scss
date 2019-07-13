@@ -1,0 +1,41 @@
+@import './constants.scss';
+
+#auth-form label, input, small
+{
+    text-align: center;
+    font: $font-book;
+}
+
+#auth-form small
+{
+    font-size: 0.75rem;
+}
+
+#auth-form p
+{
+    font: $font-book;
+    text-align: center;
+}
+
+
+#auth-form input
+{
+    border: 1px solid $navy;
+    padding: 1.4rem;
+    font-size: 1.1rem;
+    font: $font-demibold;
+}
+
+#auth-form .custom-button
+{
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.alert
+{
+    text-align: center;
+    border-radius: 10px;
+}

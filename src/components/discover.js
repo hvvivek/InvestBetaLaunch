@@ -68,13 +68,13 @@ class Discover extends Component {
     return (
         <div className='row' id='discover'>
             <h3 className='col-10 offset-1'>Discover</h3>
-            <Button className='next'><i class="fas fa-chevron-right"></i></Button>
+            <Button className='next'><i className="fas fa-chevron-right"></i></Button>
             <div className='col-12 wrapper'>
               <div className='opportunities-wrapper'>
                 {opportunities}
               </div>
               <div className='row see-all-link'>
-                <a href="/" className='col-12'>SEE ALL OPPORTUNITIES <i class="fas fa-chevron-right"></i></a>
+                <a href="/" className='col-12'>SEE ALL OPPORTUNITIES <i className="fas fa-chevron-right"></i></a>
               </div>
             </div>
         </div>

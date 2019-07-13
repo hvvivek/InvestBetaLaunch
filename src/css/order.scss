@@ -1,0 +1,38 @@
+@import './constants.scss';
+
+#checkout-form .custom-button
+{
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#checkout-form .calculator
+{
+    margin-bottom: 2rem;
+}
+
+#checkout-form .calculator>div
+{
+    background-color: $earth;
+    border: 1px solid rgb(231, 210, 114);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#checkout-form .calculator span.text
+{
+    margin: auto;
+    padding: 0px;
+    text-align: center;
+}
+
+#checkout-form .calculator span.total
+{
+    font: $font-demibold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

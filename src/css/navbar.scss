@@ -34,6 +34,40 @@
     text-align: center;
 }
 
+.navbar-light .navbar-brand:hover
+{
+    color: rgb(21, 70, 85)
+}
+
+#navbar .user-section
+{
+
+}
+
+#navbar .user-section p
+{
+    // margin-bottom: 0px;
+    // font: $font-book;  
+    // text-align: left;  
+    // margin-left: 2rem;
+    // margin-top: 2rem;    
+    // margin-bottom: 1rem;
+
+}
+
+#navbar .user-section .custom-button
+{
+    // margin-left: 3rem;
+    // margin-top: 0rem;
+
+    // font: $font-book;    
+    // margin-bottom: 0.5rem;
+    // font-size: 0.85rem;
+    // padding: 1rem;
+    min-width: 8rem;
+    clear: both;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
    
@@ -41,7 +75,7 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-   
+    
  }
 
 // Large devices (desktops, 992px and up)
@@ -73,6 +107,14 @@
     {
         padding-bottom: 0px;
     }
+
+    #navbar .user-section .custom-button
+    {
+        margin-left: 1rem;
+        margin-right: 0rem;
+
+    }
+
  }
 
 // Extra large devices (large desktops, 1200px and up)
