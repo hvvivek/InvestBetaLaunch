@@ -89,7 +89,7 @@ class AccountApp extends Component{
     {
         let accessToken = localStorage.getItem('jwt-token');
         // console.log(accessToken)
-        axios.get('http://localhost:3005/account/',{headers: {Authorization: `Bearer ${accessToken}`} })
+        axios.get('https://invest-beta.herokuapp.com/account/',{headers: {Authorization: `Bearer ${accessToken}`} })
         .then(
             (res) => {
                 // console.log(res.data)

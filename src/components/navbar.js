@@ -60,7 +60,7 @@ class CustomNavbar extends Component {
         console.log("Getting info from access token")
         let accessToken = localStorage.getItem('jwt-token');
         console.log(accessToken)
-        axios.get('http://localhost:3005/auth/jwt',{headers: {Authorization: `Bearer ${accessToken}`} })
+        axios.get('https://invest-beta.herokuapp.com/auth/jwt',{headers: {Authorization: `Bearer ${accessToken}`} })
         .then(
             (res) => {
               console.log(res)

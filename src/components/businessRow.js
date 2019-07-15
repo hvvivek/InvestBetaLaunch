@@ -69,7 +69,7 @@ class BusinessRow extends Component{
 
     handleApproveBusiness(event)
     {
-        axios.get('http://localhost:3005/api/business-approve?id=' + this.state.data._id)
+        axios.get('https://invest-beta.herokuapp.com/api/business-approve?id=' + this.state.data._id)
         .then(
             (res) => {
                 console.log(res.data)

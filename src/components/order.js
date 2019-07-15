@@ -36,7 +36,7 @@ class OrderApp extends Component{
     downloadData()
     {
         console.log(this.state.id)
-        axios.get('http://localhost:3005/business/opportunity?id=' + this.state.id,{ crossDomain: true })
+        axios.get('https://invest-beta.herokuapp.com/business/opportunity?id=' + this.state.id,{ crossDomain: true })
         .then(
             (res) => {
                 console.log(res.data)
@@ -50,7 +50,7 @@ class OrderApp extends Component{
             console.log("Finished downloading data")
         });
 
-        axios.get('http://localhost:3005/business/opportunity?id=' + this.state.id,{ crossDomain: true })
+        axios.get('https://invest-beta.herokuapp.com/business/opportunity?id=' + this.state.id,{ crossDomain: true })
         .then(
             (res) => {
                 console.log(res.data)
@@ -76,7 +76,7 @@ class OrderApp extends Component{
             {
                 console.log("Getting info from access token")
                 let accessToken = localStorage.getItem('jwt-token');
-                axios.get('http://localhost:3005/auth/jwt',{headers: {Authorization: `Bearer ${accessToken}`} })
+                axios.get('https://invest-beta.herokuapp.com/auth/jwt',{headers: {Authorization: `Bearer ${accessToken}`} })
                 .then(
                     (res) => {
                     console.log(res)
@@ -131,7 +131,7 @@ class OrderApp extends Component{
             id: opportunity_id,
         })
 
-        axios.post('http://localhost:3005/checkout', {
+        axios.post('https://invest-beta.herokuapp.com/checkout', {
             cost: cost,
             units: units,
             card: {

@@ -31,7 +31,7 @@ class AdminApp extends Component{
     {
         let accessToken = localStorage.getItem('jwt-token');
         // console.log(accessToken)
-        axios.get('http://localhost:3005/api/business-active/',{headers: {Authorization: `Bearer ${accessToken}`} })
+        axios.get('https://invest-beta.herokuapp.com/api/business-active/',{headers: {Authorization: `Bearer ${accessToken}`} })
         .then(
             (res) => {
                 // console.log(res.data)
@@ -46,7 +46,7 @@ class AdminApp extends Component{
             // console.log("Finished downloading data")
         });
 
-        axios.get('http://localhost:3005/api/business-inactive/',{headers: {Authorization: `Bearer ${accessToken}`} })
+        axios.get('https://invest-beta.herokuapp.com/api/business-inactive/',{headers: {Authorization: `Bearer ${accessToken}`} })
         .then(
             (res) => {
                 // console.log(res.data)
@@ -61,7 +61,7 @@ class AdminApp extends Component{
             // console.log("Finished downloading data")
         });
 
-        axios.get('http://localhost:3005/api/business-approval-required/',{headers: {Authorization: `Bearer ${accessToken}`} })
+        axios.get('https://invest-beta.herokuapp.com/api/business-approval-required/',{headers: {Authorization: `Bearer ${accessToken}`} })
         .then(
             (res) => {
                 // console.log(res.data)

@@ -52,7 +52,7 @@ class BusinessRegistrationApp extends Component{
         body.linkedin           = values.li_link
         console.log(body)
 
-        axios.post('http://localhost:3005/api/register-business', body)
+        axios.post('https://invest-beta.herokuapp.com/api/register-business', body)
               .then((response) => {
                 response = response.data
                 if(response.status)

@@ -35,7 +35,7 @@ class AuthApp extends Component{
         }
         else
         {
-            axios.post('http://localhost:3005/auth/register', {
+            axios.post('https://invest-beta.herokuapp.com/auth/register', {
                 email: email,
                 password: password,
               })
@@ -66,7 +66,7 @@ class AuthApp extends Component{
         var email = this.state.email;
         var password = this.state.password;
         
-        axios.post('http://localhost:3005/auth/login', {
+        axios.post('https://invest-beta.herokuapp.com/auth/login', {
                 email: email,
                 password: password,
             })
