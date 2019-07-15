@@ -27,7 +27,7 @@ class DiscoverApp extends Component {
 
     downloadData()
     {
-        axios.get('http://www.investbeta.com/business/opportunities',{ crossDomain: true })
+        axios.get('https://invest-beta.herokuapp.com/business/opportunities',{ crossDomain: true })
         .then(
             (res) => {
                 let locations = []

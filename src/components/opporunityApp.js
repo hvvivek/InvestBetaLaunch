@@ -20,7 +20,7 @@ class OpporunityApp extends Component{
     downloadData()
     {
         console.log(this.state.id)
-        axios.get('http://www.investbeta.com/business/opportunity?id=' + this.state.id,{ crossDomain: true })
+        axios.get('https://invest-beta.herokuapp.com/business/opportunity?id=' + this.state.id,{ crossDomain: true })
         .then(
             (res) => {
                 console.log(res.data)
