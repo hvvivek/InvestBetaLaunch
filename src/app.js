@@ -13,6 +13,9 @@ import OpporunityApp from './components/opporunityApp';
 import AuthApp from './components/auth';
 import AccountApp from './components/accountApp';
 import OrderApp from './components/order';
+import BusinessRegistrationApp from './components/businessRegistrationApp';
+import AdminApp from './components/adminApp';
+import OpportunityRegistrationApp from './components/opportunityRegistrationApp';
 
 
 function LandingPage() {
@@ -78,6 +81,18 @@ function AccountPage() {
         </div>);
 }
 
+function AdminPage() {
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <AdminApp></AdminApp>
+          <Footer></Footer>
+        </div>);
+}
+
 function OrderPage({match}) {
   console.log(match.params.id)
   return (<div>
@@ -87,6 +102,30 @@ function OrderPage({match}) {
             </Row>
           </div>
           <OrderApp id={match.params.id}></OrderApp>
+          <Footer></Footer>
+        </div>);
+}
+
+function BusinessRegistrationPage() {
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <BusinessRegistrationApp></BusinessRegistrationApp>
+          <Footer></Footer>
+        </div>);
+}
+
+function OpportunityRegistrationPage({match}) {
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <OpportunityRegistrationApp id={match.params.id}></OpportunityRegistrationApp>
           <Footer></Footer>
         </div>);
 }
@@ -121,6 +160,9 @@ class App extends Component {
           <Route path="/auth/:id" component={AuthPage} />
           <Route path="/account" component={AccountPage} />
           <Route path="/order/:id" component={OrderPage} />
+          <Route path="/register" component={BusinessRegistrationPage} />
+          <Route path="/create/:id" component={OpportunityRegistrationPage} />
+          <Route path="/admin" component={AdminPage} />
 
         </div>
       </Router>
@@ -129,47 +171,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-
-// function Index() {
-//   return <h2>Home</h2>;
-// }
-
-// function About() {
-//   return <h2>About</h2>;
-// }
-
-// function Users() {
-//   return <h2>Users</h2>;
-// }
-
-// function AppRouter() {
-//   return (
-//     <Router>
-//       <div>
-//         <nav>
-//           <ul>
-//             <li>
-//               <Link to="/">Home</Link>
-//             </li>
-//             <li>
-//               <Link to="/about/">About</Link>
-//             </li>
-//             <li>
-//               <Link to="/users/">Users</Link>
-//             </li>
-//           </ul>
-//         </nav>
-
-//         <Route path="/" exact component={Index} />
-//         <Route path="/about/" component={About} />
-//         <Route path="/users/" component={Users} />
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default AppRouter;
-

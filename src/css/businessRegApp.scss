@@ -1,0 +1,59 @@
+@import './constants.scss';
+
+#business-reg-app
+{
+
+}
+
+#business-reg-app h1
+{
+    font: $font-bold;
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#business-reg-app h3
+{
+    font: $font-medium;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#business-reg-app input
+{
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    border-bottom: 2px solid $navy;
+    font: $font-light;
+    text-align: left;
+
+}
+
+#business-reg-app i
+{
+    font-size: 2rem;
+    margin: auto;
+
+}
+
+#business-reg-app label
+{
+    font: $font-medium;
+    // text-align: center;
+    margin-bottom: 1rem;
+    color: $teal;
+
+}
+
+#business-reg-app .custom-button
+{
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}

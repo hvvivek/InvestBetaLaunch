@@ -45,7 +45,7 @@ class DiscoverApp extends Component {
                 business_type = business_type.filter(function (item, index) {
                     return business_type.indexOf(item) >= index;
                 });
-
+                console.log(res.data)
                 this.setState({
                     data: res.data, 
                     original_data: res.data, 

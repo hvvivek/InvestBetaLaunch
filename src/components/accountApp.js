@@ -43,7 +43,7 @@ class InvestmentRow extends Component{
     }
 
     render() {
-
+        console.log(this.state.data)
         let business_name = this.state.data.opportunity.business.name
         let start_date = this.getFormattedDate(this.state.data.opportunity.createdAt);
         let end_date = this.getFormattedDate(this.state.data.opportunity.maturity);
@@ -127,14 +127,14 @@ class AccountApp extends Component{
         let total_past_investments = 0
         let total_current_returns = 0
         let total_past_returns = 0
-
+        console.log(this.state.data)
         if(this.state.data.investments)
         {
             for(var i=0; i<this.state.data.investments.length; i++)
             {
                 var investment = this.state.data.investments[i]
                 // console.log(new Date(investment.opportunity.maturity) - new Date())
-                if(new Date(investment.opportunity.maturity) - new Date() > 0)
+                if(investment.opportunity && new Date(investment.opportunity.maturity) - new Date() > 0)
                 {
                     total_current_investments = total_current_investments + (investment.opportunity.unit_price * investment.units)
                     // console.log("TCI" + total_current_investments)
@@ -143,7 +143,7 @@ class AccountApp extends Component{
                         <InvestmentRow key={i} data={investment}></InvestmentRow>
                     )
                 }
-                else{
+                else if(investment.opportunity){
                     total_past_investments = total_past_investments + (investment.opportunity.unit_price * investment.units)
                     total_past_returns = total_past_returns + this.getReturns(investment)
                     rows_past.push(
