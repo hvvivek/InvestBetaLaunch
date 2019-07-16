@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Button, Col, Row, ProgressBar, FormControl, InputGroup} from 'react-bootstrap';
 import Opportunity from './opportunity';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 class OpporunityApp extends Component{
 
@@ -9,6 +10,7 @@ class OpporunityApp extends Component{
     {
       super(props);
       this.handleChange = this.handleChange.bind(this)
+      this.handleInvestNow = this.handleInvestNow.bind(this)
       this.state = {id: this.props.id, data: {}}
     }
   
@@ -38,6 +40,12 @@ class OpporunityApp extends Component{
     handleChange(event)
     {
         this.setState({price: event.target.value * this.state.data.unit_price});
+    }
+
+    handleInvestNow()
+    {
+        let path = '/order/'+this.state.id
+        this.props.history.push(path)
     }
 
     render()
@@ -125,7 +133,7 @@ class OpporunityApp extends Component{
                                 </InputGroup>
                                 <span className='col-lg-5 text'>x ₦{this.state.data.unit_price} = </span>
                                 <span className='col-lg-12 total text'>₦{this.state.price}</span>
-                                <Button className='col-lg-4 offset-lg-4 custom-button'>Invest Now</Button>
+                                <Button className='col-lg-4 offset-lg-4 custom-button' onClick={this.handleInvestNow}>Invest Now</Button>
                                 </Row>
                                 </Col>
                                 <Col xs={{span:'12', offset:'0'}} md={{span:'10', offset:'1'}} lg={{span:'12', offset:'0'}} className='section-5'>
@@ -184,4 +192,4 @@ class OpporunityApp extends Component{
     }
   }
 
-  export default OpporunityApp;
+  export default withRouter(OpporunityApp);

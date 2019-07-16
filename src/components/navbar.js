@@ -12,6 +12,7 @@ class CustomNavbar extends Component {
     this.handleLogout = this.handleLogout.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
     this.handleAccount = this.handleAccount.bind(this);
+    this.handleRedirect = this.handleRedirect.bind(this);
     this.state = {loggedIn: false, user_data: {}}
   }
 
@@ -31,6 +32,11 @@ class CustomNavbar extends Component {
     localStorage.removeItem('jwt-token');
     this.setState({loggedIn: false})
     let path = '/';
+    this.props.history.push(path);
+  }
+
+  handleRedirect(path)
+  {
     this.props.history.push(path);
   }
 
@@ -119,7 +125,7 @@ class CustomNavbar extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="#home">Discover</Nav.Link>
+                <Nav.Link onClick={()=>this.handleRedirect("/discover")}>Discover</Nav.Link>
                 <Nav.Link href="#link">Blog</Nav.Link>
                 <Nav.Link href="#link">Help</Nav.Link>
                 <Nav.Link href="#link">About</Nav.Link>
