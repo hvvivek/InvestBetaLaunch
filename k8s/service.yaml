@@ -4,7 +4,7 @@ metadata:
   name: invest-beta-frontend-v2
 spec:
   selector:
-     run: invest-beta-frontend
+     run: invest-beta-react-alpha-v1
   ports:
   - protocol: TCP
     port: 80
