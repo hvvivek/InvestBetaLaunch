@@ -21,7 +21,7 @@ steps:
   args: ['apply', '-f', 'k8s/']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-east1-b'
-  - 'CLOUDSDK_CONTAINER_CLUSTER= investbeta-staging-cluster'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=investbeta-staging-cluster'
 #step 4
 - name: 'gcr.io/cloud-builders/kubectl'
   args: [
@@ -33,7 +33,7 @@ steps:
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-east1-b'
-  - 'CLOUDSDK_CONTAINER_CLUSTER= investbeta-staging-cluster'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=investbeta-staging-cluster'
 # push images to Google Container Registry with tags
 images: [
    'gcr.io/investbeta/invest-beta-react-alpha-v1:$BRANCH_NAME-$COMMIT_SHA',
