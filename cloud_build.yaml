@@ -1,0 +1,41 @@
+steps:
+#step 1
+- name: 'gcr.io/cloud-builders/docker' 
+  entrypoint: 'bash'
+  args: [
+   '-c', 
+   'docker pull gcr.io/investbeta/investbetainvest-beta-react-alpha-v1:latest || exit 0'
+  ]
+#step 2
+- name: gcr.io/cloud-builders/docker
+  args: [
+   'build', 
+   '-t', 
+   'gcr.io/investbeta/investbetainvest-beta-react-alpha-v1:$BRANCH_NAME-$COMMIT_SHA',
+   '-t', 
+   'gcr.io/investbeta/investbetainvest-beta-react-alpha-v1:latest',
+   '.'
+  ]
+#step 3
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['apply', '-f', 'k8s/']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-east1-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER= investbeta-staging-cluster'
+#step 4
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: [
+   'set', 
+   'image', 
+   'deployment', 
+   'investbetainvest-beta-react-alpha-v1', 
+   'investbetainvest-beta-react-alpha-v1=gcr.io/investbeta/investbetainvest-beta-react-alpha-v1:$BRANCH_NAME-$COMMIT_SHA'
+  ]
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-east1-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER= investbeta-staging-cluster'
+# push images to Google Container Registry with tags
+images: [
+   'gcr.io/investbeta/investbetainvest-beta-react-alpha-v1:$BRANCH_NAME-$COMMIT_SHA',
+   'gcr.io/investbeta/investbetainvest-beta-react-alpha-v1:latest'
+  ]

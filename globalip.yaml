@@ -1,0 +1,10 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: investbeta-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "investbeta-production"
+spec:
+  backend:
+    serviceName: web
+    servicePort: 80

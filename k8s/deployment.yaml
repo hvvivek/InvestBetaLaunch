@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: invest-beta-frontend 
+  name: invest-beta-frontend 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: invest-beta-frontend 
+  template:
+    metadata:
+      labels:
+        run: invest-beta-frontend 
+    spec:
+      containers:
+      - image: gcr.io/investbeta/invest-beta-frontend :latest
+        name: invest-beta-frontend 
+        ports:
+        - containerPort: 80

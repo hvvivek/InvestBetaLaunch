@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: investbeta-production
+  labels:
+    app: production
+spec:
+  selector:
+    matchLabels:
+      app: investbeta
+      tier: production
+  template:
+    metadata:
+      labels:
+        app: investbeta
+        tier: production
+    spec:
+      containers:
+      - name: invest-beta-alpha-v1
+        image: gcr.io/investbeta/invest-beta-react-alpha-v1:latest
+        ports:
+        - containerPort: 80

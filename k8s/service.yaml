@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: invest-beta-frontend-v2
+spec:
+  selector:
+     run: invest-beta-frontend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: LoadBalancer
