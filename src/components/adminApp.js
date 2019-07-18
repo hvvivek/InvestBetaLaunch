@@ -4,6 +4,7 @@ import Opportunity from './opportunity';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import BusinessRow from './businessRow';
+import OpportunityRow from './opportunityRow';
 
 
 
@@ -18,7 +19,10 @@ class AdminApp extends Component{
           id: this.props.id, 
           active_businesses: [],
           inactive_businesses: [],
-          approvals_businesses: []
+          approvals_businesses: [],
+          active_opportunities: [],
+          inactive_opportunities: [],
+          approvals_opportunities: []
         }
     }
   
@@ -75,6 +79,55 @@ class AdminApp extends Component{
         .finally(function () {
             // console.log("Finished downloading data")
         });
+
+
+
+
+        axios.get('https://invest-beta.herokuapp.com/api/opportunities-active/',{headers: {Authorization: `Bearer ${accessToken}`} })
+        .then(
+            (res) => {
+                // console.log(res.data)
+                this.setState({active_opportunities: res.data})
+            }
+        )
+        .catch(function (error) {
+            // console.log("Error")
+            console.log(error);
+        })
+        .finally(function () {
+            // console.log("Finished downloading data")
+        });
+
+        axios.get('https://invest-beta.herokuapp.com/api/opportunities-inactive/',{headers: {Authorization: `Bearer ${accessToken}`} })
+        .then(
+            (res) => {
+                // console.log(res.data)
+                this.setState({inactive_opportunities: res.data})
+            }
+        )
+        .catch(function (error) {
+            // console.log("Error")
+            console.log(error);
+        })
+        .finally(function () {
+            // console.log("Finished downloading data")
+        });
+
+        axios.get('https://invest-beta.herokuapp.com/api/opportunities-approval-required/',{headers: {Authorization: `Bearer ${accessToken}`} })
+        .then(
+            (res) => {
+                // console.log(res.data)
+                this.setState({approvals_opportunities: res.data})
+            }
+        )
+        .catch(function (error) {
+            // console.log("Error")
+            console.log(error);
+        })
+        .finally(function () {
+            // console.log("Finished downloading data")
+        });
+
     }
 
     getReturns(investment)
@@ -143,10 +196,58 @@ class AdminApp extends Component{
                 
             }
         }
+
+
+        let rows_opportunities_active = []
+        let rows_opportunities_inactive = []
+        let rows_opportunities_approvals = []
+
+        if(this.state.active_opportunities)
+        {
+            for(var i=0; i<this.state.active_opportunities.length; i++)
+            {
+                var opportunities = this.state.active_opportunities[i]
+                // console.log(new Date(investment.opportunity.maturity) - new Date())
+                
+                    rows_opportunities_active.push(
+                        <OpportunityRow key={i} data={opportunities} section="ACTIVE_OPPORTUNITY"></OpportunityRow>
+                    )
+                
+            }
+        }
+
+        if(this.state.inactive_opportunities)
+        {
+            for(var i=0; i<this.state.inactive_opportunities.length; i++)
+            {
+                var opportunities = this.state.inactive_opportunities[i]
+                // console.log(new Date(investment.opportunity.maturity) - new Date())
+                
+                    rows_opportunities_inactive.push(
+                        <OpportunityRow key={i} data={opportunities} section="INACTIVE_OPPORTUNITY"></OpportunityRow>
+                    )
+                
+            }
+        }
+
+        if(this.state.approvals_opportunities)
+        {
+            for(var i=0; i<this.state.approvals_opportunities.length; i++)
+            {
+                var opportunities = this.state.approvals_opportunities[i]
+                // console.log(new Date(investment.opportunity.maturity) - new Date())
+                
+                    rows_opportunities_approvals.push(
+                        <OpportunityRow key={i} data={opportunities} section="APPROVAL_OPPORTUNITY"></OpportunityRow>
+                    )
+                
+            }
+        }
+
       return <Col xs='12' lg={{span:'10', offset:'1'}} id="admin-page"> 
               <h1 className="d-none d-lg-block col-12 col-md-12 col-lg-12">Welcome!</h1>
           <Row>
-              <Col xs={{span:'12'}} lg={{span:'4'}}>
+              <Col xs={{span:'12'}} md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}}>
                 <Row>
                     <h3 className='col-12'>Active Businesses</h3>
                     {rows_business_active}
@@ -154,34 +255,32 @@ class AdminApp extends Component{
             </Col>
             <Col xs='12' md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}}>
                 <Row>
-                    <h3>Inactive Businesses</h3>
+                <h3 className='col-12'>Inactive Businesses</h3>
                     {rows_business_inactive}
                 </Row>
             </Col>
             <Col xs='12' md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}} className='past-investments'>
                 <Row>
-                    <h3>Approve Businesses</h3>
+                <h3 className='col-12'>Approve Businesses</h3>
                     {rows_business_approvals}
                 </Row>
             </Col>
 
             <Col xs={{span:'12'}} lg={{span:'4'}}>
-              <h3>Active Opportunities</h3>
-              
+            <h3 className='col-12'>Active Opportunities</h3>
+              {rows_opportunities_active}
             </Col>
             <Col xs='12' md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}}>
-            <h3>Inactive Opportunities</h3>
-            
+            <h3 className='col-12'>Inactive Opportunities</h3>
+            {rows_opportunities_inactive}
             </Col>
             <Col xs='12' md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}} className='past-investments'>
-            <h3>Approve Opportunities</h3>
-            
+            <h3 className='col-12'>Approve Opportunities</h3>
+            {rows_opportunities_approvals}
             </Col>
         </Row>
 
         <Button className='custom-button col-4 offset-4 col-lg-2 offset-lg-5' onClick={()=>{this.redirect("/register")}}>Create Business</Button>
-        <Button className='custom-button col-4 offset-4 col-lg-2 offset-lg-5'>Create Opportunity</Button>
-
       </Col>;
     }
   }

@@ -20,6 +20,7 @@ import './css/account.scss';
 import './css/order.scss';
 import './css/businessRegApp.scss';
 import './css/admin.scss';
+import './css/thankyou.scss';
 
 import App from './app';
 import * as serviceWorker from './serviceWorker';

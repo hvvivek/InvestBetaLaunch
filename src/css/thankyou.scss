@@ -1,0 +1,42 @@
+@import './constants.scss';
+
+#thank-you-app
+{
+    padding: 3rem;
+    background-color: $darknavy;
+    min-height: calc(100vh - 5rem);
+}
+
+#thank-you-app>div
+{
+    margin: auto;
+}
+
+#thank-you-app .custom-button
+{
+    padding: 1rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#thank-you-app .custom-button:hover
+{
+    background-color: $turquoise;
+    color: $navy;
+}
+
+#thank-you-app p
+{
+    font: $font-medium;
+    color: $turquoise;  
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+
+#thank-you-app h3
+{
+    font: $font-bold;
+    color: $lgreen;
+    font-size: 2.5rem  
+}
