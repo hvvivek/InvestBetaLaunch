@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Button, Col, Row, ProgressBar, FormControl, InputGroup} from 'react-bootstrap';
 import Opportunity from './opportunity';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 
 class InvestmentRow extends Component{
@@ -203,9 +204,9 @@ class AccountApp extends Component{
             </Col>
         </Row>
 
-        <Button className='custom-button col-4 offset-4 col-lg-2 offset-lg-5'>Discover More</Button>
+        <Button className='custom-button col-4 offset-4 col-lg-2 offset-lg-5' onClick={() => {this.props.history.push('/discover')}}>Discover More</Button>
       </Col>;
     }
   }
 
-  export default AccountApp;
+  export default withRouter(AccountApp);

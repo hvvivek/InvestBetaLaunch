@@ -15,6 +15,11 @@ footer ul
     margin-top: 2rem;
 }
 
+footer ul a
+{
+    color: $teal;
+}
+
 footer ul>li:first-of-type
 {
     font: $font-bold;

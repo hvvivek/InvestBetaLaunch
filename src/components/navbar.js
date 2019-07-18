@@ -106,8 +106,8 @@ class CustomNavbar extends Component {
     {
       user_actions = 
       <Row>
-        <Button onClick={this.handleLogin} className='custom-button custom-button-inverse'>Log In</Button>   <br className="d-block d-lg-none"></br>
-        <Button onClick={this.handleSignup} className='custom-button'>Sign Up</Button>
+        <a href='/auth/login'><Button onClick={this.handleLogin} className='custom-button custom-button-inverse'>Log In</Button></a><br className="d-block d-lg-none"></br>
+        <a href='/auth/signup'><Button className='custom-button'>Sign Up</Button></a>
       </Row>
     }
 

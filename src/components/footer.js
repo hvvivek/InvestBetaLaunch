@@ -17,7 +17,7 @@ class Footer extends Component {
 
             <ul className="col-6 col-sm-3 offset-sm-0 col-lg-2 offset-lg-1 offset-xl-0">
                 <li>Company</li>
-                <li>Discover</li>
+                <li><a href="/discover">Discover</a></li>
                 <li>Blog</li>
                 <li>FAQ</li>
                 <li>About Us</li>

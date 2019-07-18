@@ -24,6 +24,8 @@ class Opportunity extends Component {
     this.props.history.push(path);
   }
 
+  
+
   render() {
     console.log("Rendering card again")
     let fundingLeft = (this.state.data.units - this.state.data.units_sold) * this.state.data.unit_price

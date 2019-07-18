@@ -11,12 +11,19 @@ class OpporunityApp extends Component{
       super(props);
       this.handleChange = this.handleChange.bind(this)
       this.handleInvestNow = this.handleInvestNow.bind(this)
-      this.state = {id: this.props.id, data: {}}
+      this.checkLogin = this.checkLogin.bind(this)
+      this.state = {
+          id: this.props.id, 
+          data: {},
+          loggedIn: false,
+          user_data:{}
+        }
     }
   
     componentDidMount()
     {
         this.downloadData()
+        this.checkLogin()
     }
 
     downloadData()
@@ -44,10 +51,63 @@ class OpporunityApp extends Component{
 
     handleInvestNow()
     {
-        let path = '/order/'+this.state.id
-        this.props.history.push(path)
+        if(this.state.loggedIn)
+        {
+            let path = '/order/'+this.state.id
+            this.props.history.push(path)
+        }
+        else
+        {
+            let path = '/auth/login'
+            this.props.history.push(path)
+        }
     }
 
+    checkLogin()
+    {
+        if(this.state.loggedIn)
+        {
+            return
+        }
+        else
+        {
+            console.log("Checking Login")
+            var accessToken = localStorage.getItem('jwt-token');
+            console.log(accessToken)
+            if(accessToken)
+            {
+            console.log("Access Token exists")
+
+            if(accessToken.length > 0)
+            {
+                console.log("Getting info from access token")
+                let accessToken = localStorage.getItem('jwt-token');
+                console.log(accessToken)
+                axios.get('https://invest-beta.herokuapp.com/auth/jwt',{headers: {Authorization: `Bearer ${accessToken}`} })
+                .then(
+                    (res) => {
+                    console.log(res)
+                        this.setState({loggedIn: res.data.auth, user_data: res.data})
+                    }
+                )
+                .catch(function (error) {
+                    console.log("Error")
+                    console.log(error);
+                })
+                .finally(function () {
+                    console.log("Finished downloading data")
+                });
+            }
+            else{
+                this.setState({loggedIn: false})
+            }
+            }
+            else{
+            this.setState({loggedIn: false})
+            }
+        }
+    }
+    
     render()
     {
         let return_value = <div></div>

@@ -25,6 +25,8 @@ class AuthApp extends Component{
         }
     }
 
+    
+
     handleSignUp(event) {
         console.log("Form Submitted");
         var email = this.state.email;
@@ -43,12 +45,15 @@ class AuthApp extends Component{
                 response = response.data
                 if(!response.auth)
                 {
+                    console.log(response)
+                    console.log("Could not create account")
                     this.setState({message: response.message});
                 }
                 else
                 {
-                    let path = '/auth/login';
-                    this.props.history.push(path);
+                    // let path = '/discover';
+                    // this.props.history.push(path);
+                    this.setState({id: 'login'})
                 }
 
               })
@@ -153,7 +158,7 @@ class AuthApp extends Component{
             <Button className='custom-button col-6 offset-3' type="submit">
             Submit
             </Button>
-            <p className='col-12'>Don't have an account yet? <a href=''>Sign up here</a></p>
+            <p className='col-12'>Don't have an account yet? <a href='/auth/signup'>Sign up here</a></p>
         </Form>
 
         let signup_form = 
@@ -196,7 +201,7 @@ class AuthApp extends Component{
             <Button className='custom-button col-6 offset-3' type="submit">
             Submit
             </Button>
-            <p className='col-12'>Already have an account? <a href=''>Log in here</a></p>
+            <p className='col-12'>Already have an account? <a href='/auth/login'>Log in here</a></p>
         </Form>
 
         let message

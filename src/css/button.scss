@@ -14,6 +14,15 @@
     outline: none;
     border: none;
 }
+.custom-button a
+{
+    color: $white;
+}
+
+.custom-button a:hover
+{
+    text-decoration: none;
+}
 
 .custom-button:hover
 {
@@ -26,6 +35,11 @@
     background-color: $white;
     outline: none;
     border: 1px solid $navy;
+}
+
+.custom-button-inverse a
+{
+    color: $navy;
 }
 
 .custom-button-inverse:hover
