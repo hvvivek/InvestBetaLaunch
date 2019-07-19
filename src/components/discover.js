@@ -66,16 +66,17 @@ class Discover extends Component {
         )
       }
     return (
-        <div className='row' id='discover'>
+        <div className='container-fluid' id='discover'>
             <h3 className='col-10 offset-1'>Discover</h3>
-            <Button className='next'><i className="fas fa-chevron-right"></i></Button>
-            <div className='col-12 wrapper'>
-              <div className='opportunities-wrapper'>
+            <div className='row wrapper'>
+              <div className='container opportunities-wrapper'>
+              <Button className='next'><i className="fas fa-chevron-right"></i></Button>
                 {opportunities}
-              </div>
-              <div className='row see-all-link'>
+                <div className='row see-all-link'>
                 <a href="/" className='col-12'>SEE ALL OPPORTUNITIES <i className="fas fa-chevron-right"></i></a>
               </div>
+              </div>
+              
             </div>
         </div>
     )

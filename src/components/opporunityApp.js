@@ -142,7 +142,7 @@ class OpporunityApp extends Component{
             let progress = (this.state.data.units_sold*100)/this.state.data.units
 
             return_value = 
-            <Row id="opportunity-app">
+            <div className='container' id="opportunity-app">
                 <Col xs={{span:'12'}} className='header'>
                     <h1>{business_name}</h1>
                     <Row>
@@ -160,7 +160,7 @@ class OpporunityApp extends Component{
                     </Row>
                 </Col>
 
-                <Col xs={{span:'12'}} xl={{span:'10', offset:'1'}}>
+                {/* <Col xs={{span:'12'}} xl={{span:'12', offset:'0'}}> */}
                     <Row>
                         <Col xs='12' lg={{span:'5', offset:'1'}} className='img-wrapper'>
                             <img src={this.state.data.picture_link} alt=""></img>
@@ -233,8 +233,8 @@ class OpporunityApp extends Component{
                     
                     
                     
-                </Col>
-            </Row>
+                {/* </Col> */}
+            </div>
         }
 
 

@@ -97,7 +97,8 @@
 @media (min-width: 992px) { 
     #testimonials .img-wrapper
     {
-        height: 600px;
+        height: max-content;
+        max-height: 800px;
         overflow: hidden;
     }
 
@@ -148,26 +149,26 @@
     #testimonials .text h6
     {
         font: $font-bold;
-        font-size: 2.7rem;
+        font-size: 2rem;
         margin-top: 2rem;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
     }
 
     #testimonials .text p
     {
-        font-size: 1.7rem;
+        font-size: 1.2rem;
         margin-bottom: 2rem;
     }
 
     #testimonials .text p span
     {
-        font-size: 1.7rem;
+        font-size: 1.2rem;
     }
 
 
     #testimonials .text a
     {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin-top: 2rem;
     }
 

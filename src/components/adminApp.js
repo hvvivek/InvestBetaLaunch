@@ -244,7 +244,7 @@ class AdminApp extends Component{
             }
         }
 
-      return <Col xs='12' lg={{span:'10', offset:'1'}} id="admin-page"> 
+      return <div className='container' id="admin-page"> 
               <h1 className="d-none d-lg-block col-12 col-md-12 col-lg-12">Welcome!</h1>
           <Row>
               <Col xs={{span:'12'}} md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}}>
@@ -281,7 +281,7 @@ class AdminApp extends Component{
         </Row>
 
         <Button className='custom-button col-4 offset-4 col-lg-2 offset-lg-5' onClick={()=>{this.redirect("/register")}}>Create Business</Button>
-      </Col>;
+      </div>;
     }
   }
 

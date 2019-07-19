@@ -2,7 +2,8 @@
 
 .opportunity
 {
-    width: 275px;
+    min-width: 275px;
+    max-width: 275px;
     height: 450px;
     // float: left;
     background-color: white;

@@ -13,7 +13,7 @@ class Advantage extends Component {
 
   render() {
     return (
-      <div className='row' id='advantage'>
+      <div className='container-fluid' id='advantage'>
         <Row className="d-block d-xl-none">
         <h2 className='col-10 offset-1 col-sm-5 offset-sm-1 col-lg-10 offset-lg-1'>The InvestBeta Advantage</h2>
           <Col xs={{span: '10', offset: '1'}} sm={{span: '5', offset: '0'}} lg={{span: '3', offset: '1'}} className="wrapper">
@@ -28,9 +28,9 @@ class Advantage extends Component {
           </Col>
           </Row>
 
-          <Row className="d-none d-xl-block">
-        <h2 className='col-10 offset-1 col-sm-5 offset-sm-1 col-lg-10 offset-lg-1'>The InvestBeta Advantage</h2>
-        <Col xl={{span:'8', offset:'2'}} className="row">
+          <div className="d-none d-xl-block container">
+        <h2 className='col-10 offset-1 col-sm-5 offset-sm-1 col-lg-10'>The InvestBeta Advantage</h2>
+        <Col xl={{span:'12', offset:'0'}} className="row">
           <Col xs={{span: '10', offset: '1'}} sm={{span: '5', offset: '0'}} lg={{span: '4', offset: '0'}} className="wrapper">
             <AdvantageLink title='Unlimited Opportunities' text={text_2} link='Discover'></AdvantageLink>
           </Col>
@@ -42,7 +42,7 @@ class Advantage extends Component {
             <AdvantageLink title='Minimum Amounts' text={text_1} link='Discover'></AdvantageLink>
           </Col>
           </Col>
-          </Row>
+          </div>
 
       </div>
     )

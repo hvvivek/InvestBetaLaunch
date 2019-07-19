@@ -180,7 +180,7 @@ class DiscoverApp extends Component {
             for(var i=0; i<this.state.data.length; i++)
             {
                 opportunities.push(
-                    <Col xs={{span:'12'}} md={{span:'6'}} lg={{span:'4'}}  xl={{span:'3'}} key={i}>
+                    <Col xs={{span:'12'}} md={{span:'6'}} lg={{span:'4'}}  key={i}>
                         <Opportunity value={this.state.data[i]} className="col-12 col-sm-6 col-lg-3"></Opportunity>
                     </Col>
                 )
@@ -219,12 +219,12 @@ class DiscoverApp extends Component {
         }
 
       return (
-          <div className='row' id='discover-app'>
+          <div className='container' id='discover-app'>
             <h1 className='col-10 offset-1'>Discover Opportunities</h1>
             
             
             {/* <Row> */}
-              <div className='col-12 wrapper'>
+              <div className='row wrapper'>
 
               <Col xs={{span: '12'}}>
                 <Row>

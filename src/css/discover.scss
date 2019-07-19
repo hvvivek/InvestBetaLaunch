@@ -29,8 +29,8 @@ h3
     font-weight: 900;
     border-radius: 50px;
     // float: right;
-    top: 5rem;
-    right: 20px;
+    top: 0rem;
+    right: 0.7rem;
     font-size: 0.9rem;
     width: 2rem;
     height: 2rem;
@@ -47,6 +47,10 @@ h3
     padding-right: 30px;
     width: max-content;
     display: flex;
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
 }
 
 #discover .see-all-link
@@ -57,6 +61,9 @@ h3
     padding-top: 30px;
     padding-bottom: 30px;
     padding-right: 5px;
+    position: absolute;
+    right: 0.7rem;
+    bottom: 1rem;
 }
 
 #discover .see-all-link a
@@ -84,14 +91,24 @@ h3
 
     #discover .next
     {
-        top: 7.5rem;
-        right: 20px;
+        top: 1rem;
+        right: 3rem;
     }
+
+    
  }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
+    #discover .see-all-link
+    {
+        right: 0.7rem;
+    }
 
+    #discover .next
+    {
+        right: 0.7rem;
+    }
  }
 
 // Large devices (desktops, 992px and up)
@@ -99,6 +116,15 @@ h3
     #discover h3
     {
         font-size: 2.5rem;
+    }
+    #discover .see-all-link
+    {
+        right: 3rem;
+    }
+
+    #discover .next
+    {
+        right: 3rem;
     }
  }
 

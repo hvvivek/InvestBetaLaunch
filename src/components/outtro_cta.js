@@ -11,8 +11,8 @@ class Outtro extends Component {
   render() {
     
     return (
-        <div className="row" id="outtro">
-            <Col xs={{span:'12'}} md={{span:'10', offset:'1'}} lg={{span:'6', offset:'3'}} className="wrapper"> 
+        <div className="container" id="outtro">
+            <Col xs={{span:'12'}} md={{span:'10', offset:'1'}} lg={{span:'8', offset:'2'}} className="wrapper"> 
             <Col xs={{span:'12'}}>
               <Row>
               <Col xs={{span:'12'}} sm={{span:'7'}} lg={{span:'6', offset:'0'}}>

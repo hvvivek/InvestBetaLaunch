@@ -169,7 +169,7 @@ class BusinessAccountApp extends Component{
             }
         }
         // return <div></div>
-      return <Col xs='12' lg={{span:'10', offset:'1'}} id="account-page"> 
+      return <div className='container' id="account-page"> 
               <h1 className="d-none d-lg-block col-12 col-md-12 col-lg-12">Welcome!</h1>
           <Row>
               <Col xs={{span:'12'}} lg={{span:'3'}}>
@@ -221,7 +221,7 @@ class BusinessAccountApp extends Component{
         </Row>
 
         <Button className='custom-button col-4 offset-4 col-lg-2 offset-lg-5' onClick={() => {this.props.history.push('/discover')}}>Create Opportunity</Button>
-      </Col>;
+      </div>;
     }
   }
 
