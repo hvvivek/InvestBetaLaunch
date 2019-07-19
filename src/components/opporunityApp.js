@@ -126,14 +126,14 @@ class OpporunityApp extends Component{
             let returns = this.state.data.returns
             let funding_to_go = (this.state.data.units - this.state.data.units_sold) * this.state.data.unit_price
 
-            let document_link_1 = this.state.data.uploads[0].link
-            let document_link_2 = this.state.data.uploads[1].link
-            let document_link_3 = this.state.data.uploads[2].link
-
-
-            let document_name_1 = this.state.data.uploads[0].link
-            let document_name_2 = this.state.data.uploads[1].link
-            let document_name_3 = this.state.data.uploads[2].link
+            var document_buttons = []
+            for(var i=0; i<this.state.data.uploads.length; i++)
+            {
+                document_buttons.push(
+                <Col xs='12' key={i} className='doc-wrapper'>
+                    <a href={this.state.data.uploads[i].link}><i class="fas fa-file-pdf"></i> Doc {i}</a>
+                </Col>)
+            }
 
             let social_media_fb = this.state.data.business.social_media[0].link
             let social_media_in = this.state.data.business.social_media[1].link
@@ -225,16 +225,7 @@ class OpporunityApp extends Component{
 
                         <Col xs={{span:'10', offset:'1'}} md={{span:'5', offset:'0'}} lg={{span:'4', offset:'1'}} className='section-6'>
                             <h5>Uploads</h5>
-                            <Col xs='12' className='doc-wrapper'>
-                                <a href={document_link_1}><i class="fas fa-file-pdf"></i> Doc 1</a>
-                            </Col>
-                            <Col xs='12' className='doc-wrapper'>
-                                <a href={document_link_2}><i class="fas fa-file-pdf"></i> Doc 2</a>
-                            </Col>
-
-                            <Col xs='12' className='doc-wrapper'>
-                                <a href={document_link_3}><i class="fas fa-file-pdf"></i> Doc 3</a>
-                            </Col>
+                            {document_buttons}
                         </Col>
                         
                     </Row>
