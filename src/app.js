@@ -17,6 +17,7 @@ import BusinessRegistrationApp from './components/businessRegistrationApp';
 import AdminApp from './components/adminApp';
 import ThankYouApp from './components/thankYouApp';
 import OpportunityRegistrationApp from './components/opportunityRegistrationApp';
+import BusinessAccountApp from './components/businessAccountApp';
 
 
 function LandingPage() {
@@ -143,6 +144,18 @@ function ThankYouPage({match}) {
         </div>);
 }
 
+function BusinessPage() {
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <BusinessAccountApp></BusinessAccountApp>
+          <Footer></Footer>
+        </div>);
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -171,6 +184,7 @@ class App extends Component {
           <Route path="/opportunity/:id" component={OpporunityPage} />
           <Route path="/auth/:id" component={AuthPage} />
           <Route path="/account" component={AccountPage} />
+          <Route path="/business" component={BusinessPage} />
           <Route path="/order/:id" component={OrderPage} />
           <Route path="/register" component={BusinessRegistrationPage} />
           <Route path="/create/:id" component={OpportunityRegistrationPage} />

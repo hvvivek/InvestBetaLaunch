@@ -24,11 +24,12 @@ ul li
 }
 #home
 {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('../images/bg_mobile.png');
     background-repeat: no-repeat;
     background-position-y: 65vh;
     background-position-x: -15vw;
+    padding-bottom: 5rem;
 }
 
 #home .buttons

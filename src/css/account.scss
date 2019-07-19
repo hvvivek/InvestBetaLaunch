@@ -69,6 +69,14 @@
     text-align: right;
 }
 
+#account-page .opportunity_row h2{
+    // font: $font-medium;
+    // font-size: 1.2rem;
+    // color: $turquoise;
+    // margin-bottom: 0rem;
+    text-align: left;
+}
+
 #account-page .investment_row h4{
     font: $font-bold;
     font-size: 0.9rem;
@@ -91,6 +99,16 @@
     text-align: right;
     margin-bottom: 0rem;
     color: $navy;
+
+
+}
+
+#account-page .opportunity_row .returns{
+    // font: $font-demibold;
+    // font-size: 0.5rem;
+    text-align: left;
+    // margin-bottom: 0rem;
+    // color: $navy;
 
 
 }
