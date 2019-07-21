@@ -25,7 +25,7 @@ class HomePage extends Component {
       <div className='container' id='home'>
         <Row>
         <CustomNavbar></CustomNavbar>
-        <h1 className='col-10 offset-1 col-sm-8 offset-sm-0 col-lg-6 offset-sm-0'>Invest in highly-vetted African SME's</h1>
+        <h1 className='col-10 offset-1 col-sm-8 offset-sm-0 col-lg-6 offset-sm-0'>Invest in highly-vetted African SMEs</h1>
         <ul className='col-10 offset-1 col-sm-8 offset-sm-0'>
             <li><img src={check} width='20'></img> Significant Returns.</li>
             <li><img src={check} width='20'></img> Capital Guaranteed.</li>
