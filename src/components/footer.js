@@ -40,7 +40,7 @@ class Footer extends Component {
                     </ul>
                 </li>
                 <li>info@investbeta.com</li>
-                <li>617-218-7273</li>
+                <li>+234-806-056-9249</li>
             </ul>
 
             <div className="col-sm-2 offset-sm-1 d-block d-lg-none footer-logo">
