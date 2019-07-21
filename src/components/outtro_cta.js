@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Row, Col} from 'react-bootstrap';
 import CustomButton from './button';
+import investor from "../images/icon_investor.svg"
+import entrepreneur from "../images/icon_entrepreneur.svg"
 
 class Outtro extends Component {
   constructor(props) {
@@ -22,10 +24,10 @@ class Outtro extends Component {
               <Col xs={{span:'12'}} sm={{span:'5'}} lg={{span:'6'}}>
                 <Row>
                   <Col xs={{span:'6'}} sm={{span:'12'}}>
-                    <CustomButton text='Investor' img='' />
+                    <CustomButton text='Investor' img={investor} />
                   </Col>
                   <Col xs={{span:'6'}} sm={{span:'12'}}>
-                    <CustomButton text='Entrepreneur' img='' />
+                    <CustomButton text='Entrepreneur' img={entrepreneur} />
                   </Col>
                 </Row>
               </Col>

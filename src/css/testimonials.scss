@@ -27,8 +27,9 @@
 
 #testimonials .img-wrapper
 {
-    height: 375px;
+    // height: 375px;
     overflow: hidden;
+    padding: 0px;
 }
 
 #testimonials img
@@ -50,6 +51,8 @@
     font: $font-bold;
     font-size: 1.6rem;
     color: $navy;
+    // line-height: 1.5;
+
 
     // margin-left: 0px;
 }
@@ -90,7 +93,11 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-
+    #testimonials img
+    {
+        width: auto;
+        height: 100%;
+    }
  }
 
 // Large devices (desktops, 992px and up)
@@ -108,6 +115,8 @@
         font-size: 1.8rem;
         margin-top: 2rem;
         margin-bottom: 6rem;
+        line-height: 1.5;
+
     }
 
     #testimonials .text p
@@ -132,6 +141,12 @@
     {
         font-size: 0.85rem;
     }
+
+    #testimonials img
+    {
+        width: 100%;
+        height: auto;
+    }
  }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -152,6 +167,8 @@
         font-size: 2rem;
         margin-top: 2rem;
         margin-bottom: 4rem;
+        line-height: 1.6;
+
     }
 
     #testimonials .text p

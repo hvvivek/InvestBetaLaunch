@@ -13,7 +13,7 @@ class CustomButton extends Component {
         <Button className='custom-button col-12'>
           <div className='row'>
             <div className='col-3 image-wrapper'>
-              <img src={placeholder_img} alt=""></img>
+              <img src={this.state.img} alt=""></img>
             </div>
             <div className='col-9 text-wrapper'>
               <p>I am an</p>

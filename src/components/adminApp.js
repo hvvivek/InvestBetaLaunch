@@ -266,19 +266,29 @@ class AdminApp extends Component{
                 </Row>
             </Col>
 
-            <Col xs={{span:'12'}} lg={{span:'4'}}>
-            <h3 className='col-12'>Active Opportunities</h3>
-              {rows_opportunities_active}
-            </Col>
-            <Col xs='12' md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}}>
-            <h3 className='col-12'>Inactive Opportunities</h3>
-            {rows_opportunities_inactive}
-            </Col>
-            <Col xs='12' md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}} className='past-investments'>
-            <h3 className='col-12'>Approve Opportunities</h3>
-            {rows_opportunities_approvals}
-            </Col>
+            
         </Row>
+
+        <Row>
+                <Col xs={{span:'12'}} md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}}>
+                    <Row>
+                        <h3 className='col-12'>Active Opportunities</h3>
+                        {rows_opportunities_active}
+                    </Row>
+                </Col>
+                <Col xs='12' md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}}>
+                    <Row>
+                        <h3 className='col-12'>Inactive Opportunities</h3>
+                        {rows_opportunities_inactive}
+                    </Row>
+                    </Col>
+                <Col xs='12' md={{span:'8', offset:'2'}} lg={{span:'4', offset:'0'}} className='past-investments'>
+                    <Row>
+                        <h3 className='col-12'>Approve Opportunities</h3>
+                        {rows_opportunities_approvals}
+                    </Row>
+                </Col>
+            </Row>
 
         <Button className='custom-button col-4 offset-4 col-lg-2 offset-lg-5' onClick={()=>{this.redirect("/register")}}>Create Business</Button>
       </div>;

@@ -103,24 +103,34 @@ class BusinessRow extends Component{
         {
             case "ACTIVE_BUSINESS":
                 buttons = 
-                <Row>
-                    <Button className='col-4 offset-1 custom-button' onClick={this.handleCreateOpportunity}>Create Opportunity</Button>
-                    <Button className='col-4 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}>See Opportunities</Button>
-                </Row>
+                <Col xs='12'>
+                    <Row>
+                        <Button className='col-2 offset-1 custom-button' onClick={this.handleCreateOpportunity}><i class="fas fa-plus-circle"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-eye"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-edit"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-trash-alt"></i></Button>
+                    </Row>
+                </Col>
                 break;
             case "INACTIVE_BUSINESS":
                 buttons =
-                <Row>
-                    <Button className='col-4 offset-1 custom-button' onClick={this.handleReactivateBusiness}>Re-activate Business</Button>
-                    <Button className='col-4 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}>See Opportunities</Button>
-                </Row>
+                <Col xs='12'>
+                    <Row>
+                        <Button className='col-2 offset-1 custom-button' onClick={this.handleReactivateBusiness}><i class="fas fa-redo-alt"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-eye"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-trash-alt"></i></Button>
+                    </Row>
+                </Col>
                 break;
             case "APPROVAL_BUSINESS":
                 buttons =
-                <Row>
-                    <Button className='col-4 offset-1 custom-button' onClick={this.handleApproveBusiness}>Approve Business</Button>
-                    <Button className='col-4 offset-1 custom-button custom-button-inverse' onClick={this.handleDisapproveBusiness}>Disapprove Business</Button>
-                </Row>
+                <Col xs='12'>
+                    <Row>
+                        <Button className='col-2 offset-1 custom-button' onClick={this.handleApproveBusiness}><i class="fas fa-check"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleDisapproveBusiness}><i class="fas fa-times"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-eye"></i></Button>
+                    </Row>
+                </Col>
                 break;
             default:
                 break;
