@@ -15,10 +15,13 @@ class Advantage extends Component {
     return (
       <div className='container-fluid' id='advantage'>
         <Row className="d-block d-xl-none">
-        <h2 className='col-10 offset-1 col-sm-5 offset-sm-1 col-lg-10 offset-lg-1'>The InvestBeta Advantage</h2>
+          <Row>
+          <h2 className='col-10 offset-1 col-sm-5 offset-sm-1 col-lg-10 offset-lg-1'>The InvestBeta Advantage</h2>
+
           <Col xs={{span: '10', offset: '1'}} sm={{span: '5', offset: '0'}} lg={{span: '3', offset: '1'}} className="wrapper">
             <AdvantageLink title='Unlimited Opportunities' text={text_2} link='Discover'></AdvantageLink>
           </Col>
+
           <Col xs={{span: '10', offset: '1'}} sm={{span: '5', offset: '1'}} lg={{span: '3', offset: '0'}} className="wrapper">
             <AdvantageLink title='Zero Stress, Zero Loss' text={text_3} link='Discover'></AdvantageLink>
           </Col>
@@ -26,6 +29,7 @@ class Advantage extends Component {
           <Col xs={{span: '10', offset: '1'}} sm={{span: '5', offset: '0'}} lg={{span: '3', offset: '0'}} className="wrapper">
             <AdvantageLink title='Minimum Amounts' text={text_1} link='Discover'></AdvantageLink>
           </Col>
+          </Row>
           </Row>
 
           <div className="d-none d-xl-block container">
