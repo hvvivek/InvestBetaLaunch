@@ -73,7 +73,7 @@ class Discover extends Component {
               <Button className='next'><i className="fas fa-chevron-right"></i></Button>
                 {opportunities}
                 <div className='row see-all-link'>
-                <a href="/" className='col-12'>SEE ALL OPPORTUNITIES <i className="fas fa-chevron-right"></i></a>
+                <a href="/discover" className='col-12'>SEE ALL OPPORTUNITIES <i className="fas fa-chevron-right"></i></a>
               </div>
               </div>
               

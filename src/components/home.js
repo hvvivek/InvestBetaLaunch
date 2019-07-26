@@ -25,18 +25,18 @@ class HomePage extends Component {
       <div className='container' id='home'>
         <Row>
         <CustomNavbar></CustomNavbar>
-        <h1 className='col-10 offset-1 col-sm-8 offset-sm-0 col-lg-6 offset-sm-0'>Invest in highly-vetted African SMEs</h1>
+        <h1 className='col-10 offset-1 col-sm-8 offset-sm-0 col-lg-8 col-xl-8 offset-sm-0'>Invest in highly-vetted African SMEs</h1>
         <ul className='col-10 offset-1 col-sm-8 offset-sm-0'>
             <li><img src={check} width='20'></img> Significant Returns.</li>
             <li><img src={check} width='20'></img> Capital Guaranteed.</li>
             <li><img src={check} width='20'></img> Meaningful Impact.</li>
         </ul>
-        <Col xs={{span:'12'}} sm={{span:'5', offset:'0'}} lg={{span:'8', offset:'0'}}  xl={{span:'5'}} className='buttons'>
+        <Col xs={{span:'12'}} sm={{span:'5', offset:'0'}} lg={{span:'8', offset:'0'}} className='buttons'>
           <Row>
-          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5'}} xl={{span:'10'}} onClick={() => this.handleRedirect('/auth/signup')}>
+          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5'}} xl={{span:'5'}} onClick={() => this.handleRedirect('/discover')}>
             <CustomButton text='Investor' img={investor} />
           </Col>
-          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5', offset:'1'}} xl={{span:'10', offset: '0'}} onClick={() => this.handleRedirect('/register')}>
+          <Col xs={{span:'6'}} sm={{span:'12'}} lg={{span:'5', offset:'1'}} xl={{span:'5', offset: '1'}} onClick={() => this.handleRedirect('/register')}>
             <CustomButton text='Entrepreneur' img={entrepreneur}  />
           </Col>
           </Row>
