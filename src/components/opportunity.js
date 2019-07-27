@@ -24,7 +24,23 @@ class Opportunity extends Component {
     this.props.history.push(path);
   }
 
-  
+  getTimeDifference(end_date, start_date)
+    {
+        var end = new Date(end_date);
+        var start = new Date(start_date);
+
+        var year_difference = end.getFullYear() - start.getFullYear();
+        if(year_difference > 1) {return `${year_difference} YEARS`}
+        else if (year_difference == 1){return `${year_difference} YEAR`}
+
+        var month_difference = end.getMonth() - start.getMonth();
+        if(month_difference > 0) {return `${month_difference} MONTHS`}
+        else if (month_difference == 1){return `${month_difference} MONTH`}
+
+        var day_difference = end.getDate() - start.getDate();
+        if(day_difference > 0) {return `${day_difference} DAYS`}
+        else if (day_difference == 1){return `${day_difference} DAY`}
+    }
 
   render() {
     console.log("Rendering card again")
@@ -46,7 +62,7 @@ class Opportunity extends Component {
             <section className="section-2 col-12">
               <p className="col-12">Unit Price</p>
               <h5 className="col-12">₦{this.state.data.unit_price}</h5>
-              <p className="col-12 returns">{this.state.data.returns}% RETURN IN 12 MONTHS</p>
+              <p className="col-12 returns">{this.state.data.returns}% RETURN IN {this.getTimeDifference(this.state.data.maturity, new Date())}</p>
             </section>
 
             <section className="section-3 col-12">
