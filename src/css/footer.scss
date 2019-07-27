@@ -56,9 +56,14 @@ footer .sm-links li:first-of-type
     color: $teal;
 }
 
-footer .footer-logo
+footer .footer-logo img
 {
     max-width: 5rem;
+}
+
+footer .footer-logo
+{
+    max-width: 2rem;
     margin-top: 3rem;
 }
 
@@ -85,6 +90,11 @@ footer i
     .logo-img-wrapper
     {
         padding-top: 3rem;
+    }
+
+    .logo-img-wrapper img
+    {
+        width: 15rem;
     }
 
     footer ul

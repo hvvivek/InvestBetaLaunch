@@ -12,7 +12,7 @@ class BusinessRegistrationApp extends Component{
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
-
+            id: this.props.id || ''
         }
     }
   

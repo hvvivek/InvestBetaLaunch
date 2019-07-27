@@ -85,6 +85,25 @@ class BusinessRow extends Component{
         });
     }
 
+
+    handleDeleteBusiness(event)
+    {
+        axios.get('https://invest-beta.herokuapp.com/api/business-delete?id=' + this.state.data._id)
+        .then(
+            (res) => {
+                console.log(res.data)
+                this.props.history.push("/admin")
+            }
+        )
+        .catch(function (error) {
+            // console.log("Error")
+            console.log(error);
+        })
+        .finally(function () {
+            // console.log("Finished downloading data")
+        });
+    }
+
     handleDisapproveBusiness(event)
     {
         
