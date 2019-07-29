@@ -11,8 +11,8 @@ class OpportunityRow extends Component{
         super(props);
         this.handleApproveBusiness = this.handleApproveBusiness.bind(this);
         this.handleCreateOpportunity = this.handleCreateOpportunity.bind(this);
-        this.handleDisapproveBusiness = this.handleDisapproveBusiness.bind(this);
-        this.handleReactivateBusiness = this.handleReactivateBusiness.bind(this);
+        this.handleEditOpportunity = this.handleEditOpportunity.bind(this);
+        this.handleDeleteOpportunity = this.handleDeleteOpportunity.bind(this);
         this.handleSeeOpportunities = this.handleSeeOpportunities.bind(this);
         this.state = {
             data:this.props.data,
@@ -70,9 +70,22 @@ class OpportunityRow extends Component{
         this.props.history.push(path)
     }
 
-    handleReactivateBusiness(event)
+    handleDeleteOpportunity(event)
     {
-        
+        axios.get('https://invest-beta.herokuapp.com/api/opportunity-delete?id=' + this.state.data._id)
+        .then(
+            (res) => {
+                console.log(res.data)
+                this.props.history.push("/admin")
+            }
+        )
+        .catch(function (error) {
+            // console.log("Error")
+            console.log(error);
+        })
+        .finally(function () {
+            // console.log("Finished downloading data")
+        });
     }
 
     handleSeeOpportunities(event)
@@ -99,9 +112,10 @@ class OpportunityRow extends Component{
         });
     }
 
-    handleDisapproveBusiness(event)
+    handleEditOpportunity(event)
     {
-        
+        let path = '/edit-opportunity/' + this.state.data._id
+        this.props.history.push(path)
     }
 
     render() {
@@ -120,8 +134,8 @@ class OpportunityRow extends Component{
                 <Row>
                     {/* <Button className='col-4 offset-1 custom-button' onClick={this.handleCreateOpportunity}>Create Opportunity</Button> */}
                     <Button className='col-2 offset-1 custom-button' onClick={this.handleSeeOpportunities}><i class="fas fa-eye"></i></Button>
-                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-edit"></i></Button>
-                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-trash-alt"></i></Button>
+                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleEditOpportunity}><i class="fas fa-edit"></i></Button>
+                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleDeleteOpportunity}><i class="fas fa-trash-alt"></i></Button>
                 </Row>
                 </Col>
                 break;
@@ -131,8 +145,8 @@ class OpportunityRow extends Component{
                 <Row>
                     {/* <Button className='col-4 offset-1 custom-button' onClick={this.handleReactivateBusiness}>Re-activate Opportunity</Button> */}
                     <Button className='col-2 offset-1 custom-button' onClick={this.handleSeeOpportunities}><i class="fas fa-eye"></i></Button>
-                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-edit"></i></Button>
-                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-trash-alt"></i></Button>
+                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleEditOpportunity}><i class="fas fa-edit"></i></Button>
+                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleDeleteOpportunity}><i class="fas fa-trash-alt"></i></Button>
                 </Row>
                 </Col>
                 break;
@@ -141,7 +155,7 @@ class OpportunityRow extends Component{
                 <Col xs='12'>
                 <Row>
                     <Button className='col-2 offset-1 custom-button' onClick={this.handleApproveBusiness}><i class="fas fa-check"></i></Button>
-                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleDisapproveBusiness}><i class="fas fa-times"></i></Button>
+                    <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleDeleteOpportunity}><i class="fas fa-times"></i></Button>
                     <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-eye"></i></Button>
                 </Row>
                 </Col>

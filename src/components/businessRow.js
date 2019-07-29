@@ -13,7 +13,10 @@ class BusinessRow extends Component{
         this.handleCreateOpportunity = this.handleCreateOpportunity.bind(this);
         this.handleDisapproveBusiness = this.handleDisapproveBusiness.bind(this);
         this.handleReactivateBusiness = this.handleReactivateBusiness.bind(this);
-        this.handleSeeOpportunities = this.handleSeeOpportunities.bind(this);
+        this.handleEditBusiness = this.handleEditBusiness.bind(this);
+        this.handleDeleteBusiness = this.handleDeleteBusiness.bind(this);
+
+        this.handleSeeBusiness = this.handleSeeBusiness.bind(this);
         this.state = {
             data:this.props.data,
             section: this.props.section
@@ -62,9 +65,16 @@ class BusinessRow extends Component{
         
     }
 
-    handleSeeOpportunities(event)
+    handleSeeBusiness(event)
     {
-        
+        let path = '/business/' + this.state.data._id
+        this.props.history.push(path)
+    }
+
+    handleEditBusiness(event)
+    {
+        let path = '/edit-business/' + this.state.data._id
+        this.props.history.push(path)
     }
 
     handleApproveBusiness(event)
@@ -125,9 +135,9 @@ class BusinessRow extends Component{
                 <Col xs='12'>
                     <Row>
                         <Button className='col-2 offset-1 custom-button' onClick={this.handleCreateOpportunity}><i class="fas fa-plus-circle"></i></Button>
-                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-eye"></i></Button>
-                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-edit"></i></Button>
-                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-trash-alt"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeBusiness}><i class="fas fa-eye"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleEditBusiness}><i class="fas fa-edit"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleDeleteBusiness}><i class="fas fa-trash-alt"></i></Button>
                     </Row>
                 </Col>
                 break;
@@ -136,8 +146,8 @@ class BusinessRow extends Component{
                 <Col xs='12'>
                     <Row>
                         <Button className='col-2 offset-1 custom-button' onClick={this.handleReactivateBusiness}><i class="fas fa-redo-alt"></i></Button>
-                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-eye"></i></Button>
-                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-trash-alt"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeBusiness}><i class="fas fa-eye"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleDeleteBusiness}><i class="fas fa-trash-alt"></i></Button>
                     </Row>
                 </Col>
                 break;
@@ -146,8 +156,8 @@ class BusinessRow extends Component{
                 <Col xs='12'>
                     <Row>
                         <Button className='col-2 offset-1 custom-button' onClick={this.handleApproveBusiness}><i class="fas fa-check"></i></Button>
-                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleDisapproveBusiness}><i class="fas fa-times"></i></Button>
-                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeOpportunities}><i class="fas fa-eye"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleDeleteBusiness}><i class="fas fa-times"></i></Button>
+                        <Button className='col-2 offset-1 custom-button custom-button-inverse' onClick={this.handleSeeBusiness}><i class="fas fa-eye"></i></Button>
                     </Row>
                 </Col>
                 break;

@@ -265,7 +265,7 @@ class DiscoverApp extends Component {
                     </Dropdown>
                 </Row>
             </Col>
-                <div className='opportunities-wrapper row'>
+                <div className='col-12 opportunities-wrapper row'>
                   {opportunities}
                 </div>
               </div>

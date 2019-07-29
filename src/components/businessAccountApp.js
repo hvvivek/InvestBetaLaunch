@@ -92,7 +92,7 @@ class BusinessAccountApp extends Component{
     constructor(props)
     {
       super(props);
-      this.state = {id: this.props.id, data: {}}
+      this.state = {id: this.props.id, data: {}, opportunities: {}}
     }
   
     componentDidMount()
@@ -102,22 +102,45 @@ class BusinessAccountApp extends Component{
 
     downloadData()
     {
-        let accessToken = localStorage.getItem('jwt-token');
-        // console.log(accessToken)
-        axios.get('https://invest-beta.herokuapp.com/account/business',{headers: {Authorization: `Bearer ${accessToken}`} })
-        .then(
-            (res) => {
-                // console.log(res.data)
-                this.setState({data: res.data})
-            }
-        )
-        .catch(function (error) {
-            // console.log("Error")
-            console.log(error);
-        })
-        .finally(function () {
-            // console.log("Finished downloading data")
-        });
+        if(this.state.id)
+        {
+            // console.log(accessToken)
+            axios.get('https://invest-beta.herokuapp.com/api/business-opportunities?id=' + this.state.id)
+            .then(
+                (res) => {
+                    // console.log(res.data)
+                    this.setState({data: res.data})
+                }
+            )
+            .catch(function (error) {
+                // console.log("Error")
+                console.log(error);
+            })
+            .finally(function () {
+                // console.log("Finished downloading data")
+            });
+        }
+        else
+        {
+            let accessToken = localStorage.getItem('jwt-token');
+            // console.log(accessToken)
+            axios.get('https://invest-beta.herokuapp.com/account/business',{headers: {Authorization: `Bearer ${accessToken}`} })
+            .then(
+                (res) => {
+                    // console.log(res.data)
+                    this.setState({data: res.data})
+                }
+            )
+            .catch(function (error) {
+                // console.log("Error")
+                console.log(error);
+            })
+            .finally(function () {
+                // console.log("Finished downloading data")
+            });
+        }
+
+        
     }
 
     getReturns(investment)
@@ -168,12 +191,41 @@ class BusinessAccountApp extends Component{
                 }
             }
         }
+
+        let opportunities = []
+        if(this.state.data.opportunities)
+        {
+            for(var i=0; i<this.state.data.opportunities.length; i++)
+            {
+                opportunities.push(
+                    // <Col xs={{span:12}} sm={{span:6}} lg={{span:3}} key={i}>
+                        <Opportunity value={this.state.data.opportunities[i]} key={i}></Opportunity>
+                    // </Col>
+                )
+            }
+        }
+        console.log(opportunities)
         // return <div></div>
       return <div className='container' id="account-page"> 
+
               <h1 className="d-none d-lg-block col-12 col-md-12 col-lg-12">Welcome!</h1>
+
+              
           <Row>
+            <div className='col-12' id='discover'>
+                <h3 className='col-10 offset-1'>Opportunities Listed</h3>
+                <div className='col-12 wrapper'>
+                <div className='container opportunities-wrapper'>
+                    {opportunities}
+                    <div className='row see-all-link'>
+                </div>
+                </div>
+                
+                </div>
+            </div>
               <Col xs={{span:'12'}} lg={{span:'3'}}>
               <h1 className="d-block col-12 col-md-12 col-lg-12 d-lg-none">Welcome!</h1>
+              
               <Col xs={{span:'10', offset:'1'}} md={{span:'6', offset:'3'}} lg={{span:'12', offset:'0'}} className='glance'>
                   <Row>
                     <h5 className="col-12">YOUR ACCOUNT AT A GLANCE</h5>
@@ -221,6 +273,9 @@ class BusinessAccountApp extends Component{
         </Row>
 
         <Button className='custom-button col-4 offset-4 col-lg-2 offset-lg-5' onClick={() => {this.props.history.push('/discover')}}>Create Opportunity</Button>
+
+        
+
       </div>;
     }
   }

@@ -18,6 +18,8 @@ import AdminApp from './components/adminApp';
 import ThankYouApp from './components/thankYouApp';
 import OpportunityRegistrationApp from './components/opportunityRegistrationApp';
 import BusinessAccountApp from './components/businessAccountApp';
+import EditOpportunityApp from './components/editOpportunity';
+import EditBusinessApp from './components/editBusiness';
 
 
 function LandingPage() {
@@ -156,6 +158,44 @@ function BusinessPage() {
         </div>);
 }
 
+function SeeBusinessPage({match}) {
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <BusinessAccountApp id={match.params.id}></BusinessAccountApp>
+          <Footer></Footer>
+        </div>);
+}
+
+
+function EditOpportunityPage({match}) {
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <EditOpportunityApp id={match.params.id}></EditOpportunityApp>
+          <Footer></Footer>
+        </div>);
+}
+
+
+function EditBusinessPage({match}) {
+  return (<div>
+          <div className='container'>
+            <Row>
+            <CustomNavbar></CustomNavbar>
+            </Row>
+          </div>
+          <EditBusinessApp id={match.params.id}></EditBusinessApp>
+          <Footer></Footer>
+        </div>);
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -184,12 +224,16 @@ class App extends Component {
           <Route path="/opportunity/:id" component={OpporunityPage} />
           <Route path="/auth/:id" component={AuthPage} />
           <Route path="/account" component={AccountPage} />
-          <Route path="/business" component={BusinessPage} />
+          <Route path="/business" exact component={BusinessPage} />
+          <Route path="/business/:id" component={SeeBusinessPage} />
           <Route path="/order/:id" component={OrderPage} />
           <Route path="/register" component={BusinessRegistrationPage} />
           <Route path="/create/:id" component={OpportunityRegistrationPage} />
           <Route path="/admin" component={AdminPage} />
           <Route path="/thankyou/:type/:id" component={ThankYouPage} />
+          <Route path="/edit-opportunity/:id" component={EditOpportunityPage} />
+          <Route path="/edit-business/:id" component={EditBusinessPage} />
+
         </div>
       </Router>
     );
